@@ -75,3 +75,23 @@ li {
   font-size: 0.75rem;
   margin-bottom: 1rem;
 }
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.9em;
+    padding: 1em;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  section.nav {
+    padding: 0 11.25rem;;
+    font-size: 0.7rem;
+  }
+  li {
+    font-size: 0.6rem;
+  }
+  a.title {
+    font-size: 1rem;
+  }
+}
