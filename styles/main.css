@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 36em;
+  max-width: 36rem;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 0;
@@ -78,20 +78,23 @@ li {
 
 @media (max-width: 600px) {
   body {
-    font-size: 0.9em;
-    padding: 1em;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   section.nav {
-    padding: 0 11.25rem;;
-    font-size: 0.7rem;
+    padding: 0 11.25rem;
+    font-size: 0.8rem;
+  }
+  ul {
+    padding: 0 0.5rem;
   }
   li {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   a.title {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
