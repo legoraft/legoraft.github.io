@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
   height: 100vh;
 
-  background-image: url("media/error.svg");
+  background-image: url("../media/error.svg");
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center center;
