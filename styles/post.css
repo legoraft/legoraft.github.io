@@ -27,6 +27,29 @@ header {
   text-align: center;
 }
 
+footer {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  color: #4f5150;
+}
+
+section.right {
+  float: right;
+}
+
+section.left {
+  float: left;
+}
+
+svg {
+  width: 1rem;
+  fill: #4f5150;
+}
+
+svg:hover {
+  fill: #313531;
+}
+
 @media (max-width: 600px) {
   body {
     font-size: 0.9em;
@@ -63,6 +86,24 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+a.title {
+  color: #090a09;
+}
+
+a.title:hover {
+  text-decoration: none;
+}
+
+a.footer {
+  color: #4f5150;
+  text-decoration: none;
+}
+
+a.footer:hover {
+  color: #313531;
+  text-decoration: none;
 }
 
 img {
