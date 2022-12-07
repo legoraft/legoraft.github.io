@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+  
+    <link rel="stylesheet" href="../styles/post.css"/>
+  
+    <meta name="title" content="Designing a bulk storage in Minecraft"/>
+    <meta name="dcterms.date" content="2022-11-14"/>
+    <meta name="description" content="Ever
+    since I started getting into technical Minecraft, I’ve wanted to build a
+    large storage system to sort every item in the game, and I am currently
+    building one."/>
+    <meta name="keywords" content="Minecraft, technical minecraft, storage system, bulk storage, minecraft storage, shulker loader, shulker storage"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="language" content="English"/>
+    <meta name="author" content="Legoraft"/>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+  
+    <title>Designing a bulk storage in Minecraft - Legoraft</title>
+    <link rel="icon" type="image/x-icon" href="../media/favicon.ico"/>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+
+<header id="title-block-header">
+<h1 class="title">Designing a bulk storage in Minecraft</h1>
+<p class="date">2022-12-07</p>
+</header>
+
+<p>I’ve always been intrigued by large Minecraft storages. Servers like
+Scicraft and Mechanists do this stuff as if it’s a peace of cake. Ever
+since I started getting into technical Minecraft, I’ve wanted to build a
+large storage system to sort every item in the game, and I am currently
+building one.</p>
+
+<h2 id="background">Background</h2>
+<p>Me and a friend of mine are currently playing on and off on a server
+we like to call Quasicraft, it’s an smp with just the two of us and we
+like to build ambitious stuff while keeping them somewhat small and
+pretty. Before we decided on this playstyle, we tried to build the best
+and biggest stuff ever. This was really bad for our motivation and
+mental health, so we went with this more relaxed approach. I already had
+designed a huge storage system before this decision, so that one got
+scrapped. It was a very big and good storage system, but it was way to
+much for us.</p>
+
+<img src="../media/bulk-storage/spire.png" style="margin: 0 0.25rem; display: block;"><i>Old storage, codename 'The Spire'</i></img>
+
+<h2 id="design">Design</h2>
+<p>This brings us into the new storage design. We decided on some
+smaller designs and less storage, as we’re just with two and we wont
+gather 1 million items anytime soon. With these new parameters in mind,
+I started with the new system, and as usual, I started with the bulk
+storage. For anyone who isn’t familiar with this concept, in the bulk
+storage you store all the items you’d have more than 4 thousand of. A
+few criteria for the bulk storage were: <br> - It has to be easy to
+build <br> - It needs to store enough items <br> - It should store items
+in shulkerboxes</p>
+<p>With these criteria I got to designing, and oh that was a journey. My
+main concept was to have accessible shulker box loaders, which output
+full boxes into chests.</p>
+<p>My first idea with this concept was to have shulker loaders in the
+floor, which you could access from there. This idea was way to complex,
+because I needed to design custom box breakers and would mean you’d have
+items dropping from the ceiling constantly, so this idea wouldn’t
+work.</p>
+<img src="../media/bulk-storage/floor-loader.png" style="margin: 0 0.25rem; display: block;"><i>The floor based box loader</i></img>
+<p>The next idea was to go over it the ‘usual’ way, just use accessible
+box loaders from the top and a design that was already built. After
+looking around on the storage tech <a
+href="https://discord.gg/JufJ6uf">discord</a>, I found one by <a
+href="https://media.discordapp.net/attachments/749135718701465641/830266129175937084/unknown.png?width=697&height=605">vktec</a>
+that was quite promising. After this, it was a lot of fitting to find
+out how you could have access to the box while still remaining
+relatively far away from the chests, which left just 250 thousand items
+of storage. This is a lot of course, but I was hoping for slightly
+more.</p>
+<img src="../media/bulk-storage/final-loader.png" style="float: right; width: 50%; margin: 0.25rem;"/>
+<p>After fitting in the chests and loader in, I needed to add an item
+filter, and those are never compact. I just used a signal strength 15
+filter, which uses some weird comparator mechanics to achieve a filter.
+Then came the hopper locking, which is one of the most important things
+in storage tech. A single sorter had 11 hoppers in this design and a
+slice has 22. This is a lot of hoppers, which make your game lag a lot.
+The problem was that I could lock only 2 hoppers at all time. I could
+lock another 3 hoppers per item with a line, but this would only be
+functional when no sorting whatsoever is going on. And locking those
+three hoppers caused me some <a
+href="https://mastodon.social/@legoraft/109444353914106150">annoyances</a>,
+but when that was worked out, I had a finished bulk slice that was
+tileable.</p>
+
+<h2 id="storage">Storage</h2>
+<p>All in all, this bulk slice cost me about twelve hours of raw work,
+and maybe about a month of fitting Minecraft in my busy schedule. This
+slice is just the start of the large main storage I’m planning on
+building. If you’re interested, I’m planning on documenting the rest of
+the storage build, which will of course have a cool codename when I
+think of one.</p>
+</body>
+</html>
