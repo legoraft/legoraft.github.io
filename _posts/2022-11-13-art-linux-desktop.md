@@ -1,6 +1,6 @@
 ---
 title: "The beauty of the Linux desktop"
-date: 2022-11-13
+layout: post
 ---
 
 Linux is primarily a server operating system, almost every server in the world runs on it, but if we take a look at desktop Linux, it doesn't even have 5% of the market share. Even though it isn't that popular, there is a huge community centered around it, just take a look at the amount of people on forums like [r/unixporn](https://www.reddit.com/r/unixporn/). A lot of these users are people who love the open source philosophy or are programmers, as almost 50% of developers use Linux according to [Statista](https://www.statista.com/statistics/869211/worldwide-software-development-operating-system/). Because most of these users are enthusiasts, the Linux desktop is a very special thing. 
