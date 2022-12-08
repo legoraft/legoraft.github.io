@@ -1,10 +1,12 @@
 ---
 title: Linux and time
 layout: post
+date: 2022-11-29
 ---
 Linux is an awesome project, it's open source and you can customize everything, but is it really worth it? I've used Linux for about a year now and a lot of my time has gone towards my operating system instead of work or projects.
 
 I started my Linux journey around this time a year ago, I switched to Manjaro and it worked amazingly, given that it was a bit more work than your regular Windows 10 install, which just works out of the box (even though you need to wait for an eternity to let it install). After about 4 months, I switched to [Arch Linux](https://archlinux.org) and oh boy, that was quite the rollercoaster.
+
 
 ## Arch Linux
 After installing Arch, one of my first problems was sound. It took about half an hour to fix that. After that, everything was smooth sailing, I already had made an AwesomeWM config, so I got it to work somewhat out of the box. All my applications also weren't a problem, as Manjaro was already Arch based, so I had everything worked out. After a day or so of configuring, my computer was ready to use. I started playing Minecraft again on my survival server with a friend and we had a blast, designing new stuff, hyping up every update and loving the Christmas time and tiny lockdown that we had over Christmas, after that schools started and motivation dropped slightly, but we still kept on playing even when time was scarce. Then my config started to get annoying.
