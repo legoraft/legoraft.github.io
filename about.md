@@ -1,3 +1,9 @@
+---
+title: "About"
+permalink: "/about/"
+layout: page
+---
+
 Hi, I'm Legoraft, someone who's interested in a lot of things and loves to talk about them on this blog.
 
 I do a lot of things in my free time, from playing on my Minecraft server to hacking around in my Linux install. Most of these things will have some relation to technology or building things, as that is a thing I've loved to do my whole life.
