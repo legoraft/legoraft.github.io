@@ -9,7 +9,7 @@ date_format: "%B %d, %Y"
 # Layout
 
 show_excerpts: true        # show article excerpts on the home page
-show_frame: false           # adds a gray frame to the site
+show_frame: true           # adds a gray frame to the site
 show_sidebar: false        # show a sidebar instead of the usual header
 minimal: false             # use a dark header
 
@@ -21,7 +21,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Github, icon: github, url: "https://github.com/legoraft/"}
-  - {title: Subscribe, icon: mastodon, url: "https://mastodon.social/@legoraft"}
+  - {title: Mastodon, icon: mastodon, url: "https://mastodon.social/@legoraft"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
