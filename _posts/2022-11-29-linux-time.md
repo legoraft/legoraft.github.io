@@ -1,6 +1,6 @@
 ---
 title: Linux and time
-date: 2022-11-31
+layout: post
 ---
 Linux is an awesome project, it's open source and you can customize everything, but is it really worth it? I've used Linux for about a year now and a lot of my time has gone towards my operating system instead of work or projects.
 
