@@ -1,4 +1,4 @@
-baseURL = "legoraft.github.io"
+baseURL = "https://legoraft.github.io"
 languageCode = "en-us"
 title = "Legoraft's blog"
 theme = "lesser"
