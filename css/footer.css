@@ -3,7 +3,7 @@ footer {
   justify-content: space-between;
   align-items: center;
 
-  width: 42rem;
+  width: 100%;
 
   color: rgba(239, 243, 244, 0.5);
 }
@@ -15,4 +15,11 @@ footer {
 
 .socials a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+  footer {
+    width: 90%;
+    margin: 0 5%;
+  }
 }
