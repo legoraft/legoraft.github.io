@@ -68,3 +68,9 @@
 .info time {
   color: rgba(239, 243, 244, 0.3);
 }
+
+@media only screen and (max-width: 800px) {
+  .post {
+    margin: 0 1rem;
+  }
+}
