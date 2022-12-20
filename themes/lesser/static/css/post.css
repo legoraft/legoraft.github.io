@@ -1,0 +1,70 @@
+.info {
+  text-align: center;
+
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  margin: 0 1rem;
+
+  background-color: #151618;
+  border-radius: 0.5rem;
+  padding: 0 1.5rem;
+  font-family: Roboto Mono, monospace !important;
+  font-weight: 500;
+}
+
+.highlight span {
+  background-color: inherit;
+  font-family: inherit;
+}
+
+.highlight pre {
+  background-color: inherit !important;
+  color: #4f5150 !important;
+}
+
+.post {
+  font-size: 1.1rem;
+
+  margin: 0 3rem;
+}
+
+.post a {
+  color: #35aeea;
+  text-decoration: none;
+}
+
+.post a:hover {
+  text-decoration: underline;
+}
+
+.post a.footnote-ref, a.footnote-backref {
+  color: rgba(239, 243, 244, 0.3);
+}
+
+.post code {
+  font-family: Roboto Mono, monospace;
+  font-size: 0.9rem;
+
+  background-color: #151618;
+
+  padding: 0 0.2rem;
+
+  border-radius: 0.2rem;
+}
+
+.post blockquote {
+  border-left: 0.3rem solid black;
+  padding: 0 0.8rem;
+}
+
+.info h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem;
+  color: rgba(239, 243, 244, 1);
+}
+
+.info time {
+  color: rgba(239, 243, 244, 0.3);
+}

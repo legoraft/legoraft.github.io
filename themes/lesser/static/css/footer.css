@@ -1,0 +1,18 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 42rem;
+
+  color: rgba(239, 243, 244, 0.5);
+}
+
+.socials a {
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}

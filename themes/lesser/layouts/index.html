@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+<div class="content">
+  {{- range where site.RegularPages "Type" "in" site.Params.mainSections -}}
+
+  {{- partial "list.html" ( dict "url" .Permalink "title" .Title "subTitle" (.Date | time.Format (":date_medium")) ) -}}
+  {{- end -}}
+</div>
+
+{{ end }}
