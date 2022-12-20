@@ -1,5 +1,5 @@
 ---
-title: "The art of Linux customization"
+title: "The beauty of the Linux desktop"
 date: 2022-10-19
 draft: false
 ---
