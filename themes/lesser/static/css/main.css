@@ -20,6 +20,10 @@ body {
   margin: 1.25rem 0;
 }
 
+.page {
+  margin: 0 3rem;
+}
+
 .posts a {
   text-decoration: none;
   font-size: 1.25rem;
@@ -35,4 +39,10 @@ body {
 .posts time {
   color: rgba(239, 243, 244, 0.3);
   font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .page {
+    margin: 0 1rem;
+  }
 }
