@@ -4,17 +4,21 @@ footer {
   align-items: center;
 
   width: 100%;
-
-  color: rgba(239, 243, 244, 0.5);
 }
 
 .socials a {
   text-decoration: none;
   margin-right: 0.5rem;
+
+  color: rgba(239, 243, 244, 0.5);
 }
 
 .socials a:hover {
   text-decoration: underline;
+}
+
+.copy p {
+  color: rgba(239, 243, 244, 0.5);
 }
 
 @media only screen and (max-width: 800px) {
