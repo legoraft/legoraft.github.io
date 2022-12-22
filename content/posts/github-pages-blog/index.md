@@ -9,7 +9,7 @@ This blog has recently been on quite an adventure, as you can see from the 40+ c
 ## The start
 My blog started when I found this neat little markdown editor called [Abricotine](https://abricotine.brrd.fr/), in fact I'm using it to write this blog post. The editor has this feature where you can export your markdown files to HTML using [pandoc](https://pandoc.org/). The generated site looked quite neat, so I started building a blog around it. As I've already had some experience writing HTML and CSS, making a small homepage, about page and the links to my blog posts wasn't that difficult, the only problem was that it was hardcoded so every time I made a post, the homepage needed to get updated.
 
-[image of blog]
+<img src="images/blog-html.jpg" width="100%" alt="A screenshot of the hardcoded HTML blog" />
 
 The final result looked quite nice, as you can see above, but the constant updating annoyed me and it also took a huge amount of time to edit the pandoc files for every post I made.
 
