@@ -5,7 +5,7 @@ $lighterSurfaceColor: #4c566a;
 
 $primaryBody: #eceff4;
 $secondaryBody: #e5e9f0;
-$tertiaryBody: #d8ddee9;
+$tertiaryBody: #d8dee9;
 
 $accentColor: #88c0d0;
 
@@ -24,7 +24,7 @@ body {
 
 header {
     padding: 3rem 0 1rem 0;
-    color: rgba(236, 239, 244, 0.5);
+    color: $tertiaryBody;
     
     a {
         text-decoration: none;
@@ -63,7 +63,9 @@ ul.post-list {
         justify-content: space-between;
         
         p#date {
-            color: rgba(236, 239, 244, 0.25);
+            color: $lighterSurfaceColor;
+            font-family: Hack Nerd Font, monospace;
+            font-size: 1rem;
         }
         
         a {
@@ -79,5 +81,17 @@ ul.post-list {
     li:last-child {
         padding: 0.5rem 0 0 0;
         margin: 0 0 0.5rem 0;
+    }
+}
+
+footer {
+    display: flex;
+    color: $tertiaryBody;
+    justify-content: space-between;
+    padding: 2rem 0;
+    
+    a {
+        color: $accentColor;
+        text-decoration: none;
     }
 }
