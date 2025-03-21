@@ -1,6 +1,13 @@
-$backgroundColor: #ffffff;
-$textColor: #000000;
-$secondaryText: #666666;
+$backgroundColor: #2e3440;
+$surfaceColor: #3b4252;
+$lightSurfaceColor: #434c5e;
+$lighterSurfaceColor: #4c566a;
+
+$primaryBody: #eceff4;
+$secondaryBody: #e5e9f0;
+$tertiaryBody: #d8ddee9;
+
+$accentColor: #88c0d0;
 
 * {
     margin: 0;
@@ -10,18 +17,22 @@ $secondaryText: #666666;
 
 body {
     background: $backgroundColor;
-    color: $textColor;
+    color: $primaryBody;
     max-width: 36rem;
     margin: auto;
 }
 
 header {
     padding: 3rem 0 1rem 0;
-    color: $secondaryText;
+    color: rgba(236, 239, 244, 0.5);
     
     a {
         text-decoration: none;
         color: inherit;
+    }
+    
+    a:hover {
+        color: $accentColor;
     }
     
     h3 {
@@ -36,7 +47,7 @@ h2#title {
 }
 
 h3.date {
-    margin: 0.75rem 0;
+    margin: 1rem 0;
 }
 
 ul.post-list {
@@ -44,10 +55,11 @@ ul.post-list {
     padding: 0 1rem;
     
     list-style: none;
-    border-left: 2px solid $secondaryText;
+    border-left: 2px solid $lightSurfaceColor;
     
     li {
         padding: 0.5rem 0;
+        
     }
     
     li:last-child {

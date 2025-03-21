@@ -11,12 +11,15 @@ layout: default
             <h3 class="date">{{ post.date | date: "%Y" }}</h3>
             
             <ul class="post-list">
+            
             {% else %}
                 {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
                 {% capture nyear %}{{ post.next.date | date: "%Y" }}{% endcapture %}
             {% if year != nyear %}
                 </ul>
+                
                 <h3 class="date">{{ post.date | date: "%Y" }}</h3>
+                
                 <ul class="post-list">
             {% endif %}
         {% endunless %}
