@@ -25,7 +25,8 @@ layout: default
         {% endunless %}
   
         <li>
-            <p>{{ post.title }}</p>
+            <p><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></p>
+            <p id="date">{{ post.date | date: "%d - %m" }}</p>
         </li>
   
   {% endfor %}
