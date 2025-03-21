@@ -20,6 +20,7 @@ body {
     color: $primaryBody;
     max-width: 36rem;
     margin: auto;
+    font-size: 14px;
 }
 
 header {
@@ -29,15 +30,16 @@ header {
     a {
         text-decoration: none;
         color: inherit;
-    }
-    
-    a:hover {
-        color: $accentColor;
+        
+        &:hover {
+            color: $accentColor;
+        }
     }
     
     h3 {
         font-weight: normal;
         font-size: 1rem;
+        font-family: "Hack Nerd Font", monospace;
     }
 }
 
@@ -62,25 +64,26 @@ ul.post-list {
         display: flex;
         justify-content: space-between;
         
+        &:last-child {
+            padding: 0.5rem 0 0 0;
+            margin: 0 0 0.5rem 0;
+        }
+        
         p#date {
             color: $lighterSurfaceColor;
-            font-family: Hack Nerd Font, monospace;
+            font-family: "Hack Nerd Font", monospace;
             font-size: 1rem;
         }
         
         a {
             color: inherit;
             text-decoration: none;
+            
+            
+            &:hover {
+                color: $accentColor;
+            }
         }
-        
-        a:hover {
-            color: $accentColor;
-        }
-    }
-    
-    li:last-child {
-        padding: 0.5rem 0 0 0;
-        margin: 0 0 0.5rem 0;
     }
 }
 
@@ -93,5 +96,23 @@ footer {
     a {
         color: $accentColor;
         text-decoration: none;
+    }
+}
+
+article {
+    margin: 2rem 0;
+    line-height: 2rem;
+    
+    a {
+        color: $accentColor;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    p {
+        margin: 1rem 0;
     }
 }
