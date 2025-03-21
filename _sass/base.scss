@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    padding-top: 2rem;
+    padding: 3rem 0 1rem 0;
     color: $secondaryText;
     
     a {
@@ -27,5 +27,31 @@ header {
     h3 {
         font-weight: normal;
         font-size: 1rem;
+    }
+}
+
+h2#title {
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+h3.date {
+    margin: 0.75rem 0;
+}
+
+ul.post-list {
+    margin: 0 1rem;
+    padding: 0 1rem;
+    
+    list-style: none;
+    border-left: 2px solid $secondaryText;
+    
+    li {
+        padding: 0.5rem 0;
+    }
+    
+    li:last-child {
+        padding: 0.5rem 0 0 0;
+        margin: 0 0 0.5rem 0;
     }
 }
