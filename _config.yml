@@ -1,7 +1,11 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "Legoraft's blog" # the name of your site, e.g. ACME Corp.
+url: "legoraft.com"
+baseurl: "/"
+timezone: Europe/Amsterdam
+
+title: "Legoraft's blog"
 author: "Legoraft"
+
+permalink: /posts/:title
 
 plugins:
   - jekyll-feed
