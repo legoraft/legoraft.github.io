@@ -1,118 +1,14 @@
-$backgroundColor: #2e3440;
-$surfaceColor: #3b4252;
-$lightSurfaceColor: #434c5e;
-$lighterSurfaceColor: #4c566a;
-
-$primaryBody: #eceff4;
-$secondaryBody: #e5e9f0;
-$tertiaryBody: #d8dee9;
-
-$accentColor: #88c0d0;
-
 * {
     margin: 0;
     padding: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 body {
-    background: $backgroundColor;
-    color: $primaryBody;
-    max-width: 36rem;
-    margin: auto;
+    line-height: 1.5;
     font-size: 14px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 header {
-    padding: 3rem 0 1rem 0;
-    color: $tertiaryBody;
     
-    a {
-        text-decoration: none;
-        color: inherit;
-        
-        &:hover {
-            color: $accentColor;
-        }
-    }
-    
-    h3 {
-        font-weight: normal;
-        font-size: 1rem;
-        font-family: "Hack Nerd Font", monospace;
-    }
-}
-
-h2#title {
-    margin: 2rem 0;
-    font-size: 2rem;
-}
-
-h3.date {
-    margin: 1rem 0;
-}
-
-ul.post-list {
-    margin: 0 1rem;
-    padding: 0 1rem;
-    
-    list-style: none;
-    border-left: 2px solid $lightSurfaceColor;
-    
-    li {
-        padding: 0.5rem 0;
-        display: flex;
-        justify-content: space-between;
-        
-        &:last-child {
-            padding: 0.5rem 0 0 0;
-            margin: 0 0 0.5rem 0;
-        }
-        
-        p#date {
-            color: $lighterSurfaceColor;
-            font-family: "Hack Nerd Font", monospace;
-            font-size: 1rem;
-        }
-        
-        a {
-            color: inherit;
-            text-decoration: none;
-            
-            
-            &:hover {
-                color: $accentColor;
-            }
-        }
-    }
-}
-
-footer {
-    display: flex;
-    color: $tertiaryBody;
-    justify-content: space-between;
-    padding: 2rem 0;
-    
-    a {
-        color: $accentColor;
-        text-decoration: none;
-    }
-}
-
-article {
-    margin: 2rem 0;
-    line-height: 2rem;
-    
-    a {
-        color: $accentColor;
-        text-decoration: none;
-        
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    
-    p {
-        margin: 1rem 0;
-    }
 }
