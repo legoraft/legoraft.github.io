@@ -3,6 +3,9 @@ $SurfaceDark: #3f444a;
 $TertiaryLight: #5b6268;
 $SecondaryLight: #bbc2cf;
 $PrimaryLight: #eeeff1;
+$BrightBlue: #51afef;
+$DarkBlue: #2257a0;
+$DarkCyan: #5699af;
 
 @font-face {
     font-family: "Rubik";
@@ -47,6 +50,10 @@ header, footer {
             fill: $BackgroundDark;
         }
     }
+    
+    .socials {
+        display: flex;
+    }
 }
 
 section {
@@ -76,6 +83,43 @@ section {
     }
 }
 
+article {
+    line-height: 2;
+    
+    h1#title {
+        text-align: center;
+    }
+    
+    h1, h2, h3, p {
+        margin: 1rem 0;
+    }
+    
+    ul, ol {
+        margin: 1rem 1rem;
+    }
+    
+    a {
+        text-decoration: none;
+        color: $BrightBlue;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    code {
+        background-color: $SecondaryLight;
+        padding: 0.1rem 0.25rem;
+        border-radius: 0.25rem;
+    }
+    
+    pre {
+        padding: 1rem;
+        background-color: $SecondaryLight;
+        border-radius: 1rem;
+    }
+}
+
 h1 {
     font-family: Rubik, Arial, Helvetica, sans-serif;
     font-size: 2rem;
@@ -100,5 +144,5 @@ p {
 
 code {
     font-family: "Source Code Pro", "Courier New", Courier, monospace;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }

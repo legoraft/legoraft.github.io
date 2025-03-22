@@ -16,7 +16,9 @@
     {% include header.html %}
 
     <article>
-      {{ content }}
+        <h1 id="title">{{ page.title }}</h1>
+        
+        {{ content }}
     </article>
     
     {% include footer.html %}
