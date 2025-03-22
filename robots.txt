@@ -2,4 +2,4 @@
 layout: null
 ---
 
-sitemap: {{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url  }}
+sitemap: https://{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url  }}
