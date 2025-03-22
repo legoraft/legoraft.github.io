@@ -3,12 +3,10 @@ layout: default
 ---
 
 <section>
-
-    <h2 id="title">Blog</h2>
     
     {% for post in site.posts %}
         {% unless post.next %}
-            <h3 class="date">{{ post.date | date: "%Y" }}</h3>
+            <h2>{{ post.date | date: "%Y" }}</h2>
             
             <ul class="post-list">
             
@@ -18,7 +16,7 @@ layout: default
             {% if year != nyear %}
                 </ul>
                 
-                <h3 class="date">{{ post.date | date: "%Y" }}</h3>
+                <h2>{{ post.date | date: "%Y" }}</h2>
                 
                 <ul class="post-list">
             {% endif %}

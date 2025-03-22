@@ -22,14 +22,21 @@ body {
 header {
     padding: 2rem 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     
     a {
         color: inherit;
         text-decoration: none;
     }
     
-    img {
-        color: inherit;
+    svg {
+        fill: $TertiaryLight;
+        width: 1rem;
+        
+        &:hover {
+            fill: $BackgroundDark;
+        }
     }
 }
 
