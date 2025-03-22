@@ -1,0 +1,28 @@
+// Homepage-specific CSS settings
+section {
+    h2 {
+        margin: 1rem 0;
+    }
+    
+    ul.post-list {
+        list-style: none;
+        margin: 0 1rem;
+        
+        li {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    
+    p#date {
+        font-family: "Source Code Pro", "Courier New", Courier, monospace;
+        color: $SecondaryLight;
+    }
+}

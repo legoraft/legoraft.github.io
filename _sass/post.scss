@@ -1,0 +1,37 @@
+// Post-specific CSS settings
+article {
+    line-height: 2;
+    
+    h1#title {
+        text-align: center;
+    }
+    
+    h1, h2, h3, p {
+        margin: 1rem 0;
+    }
+    
+    ul, ol {
+        margin: 1rem 1rem;
+    }
+    
+    a {
+        text-decoration: none;
+        color: $BrightBlue;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    code {
+        background-color: $SurfaceDark;
+        padding: 0.1rem 0.25rem;
+        border-radius: 0.25rem;
+    }
+    
+    pre {
+        padding: 1rem;
+        background-color: $SurfaceDark;
+        border-radius: 1rem;
+    }
+}
