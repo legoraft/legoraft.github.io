@@ -38,15 +38,6 @@ header {
         color: inherit;
         text-decoration: none;
     }
-    
-    svg {
-        fill: $TertiaryLight;
-        width: 1rem;
-        
-        &:hover {
-            fill: $BackgroundDark;
-        }
-    }
 }
 
 section {
@@ -101,4 +92,13 @@ p {
 code {
     font-family: "Source Code Pro", "Courier New", Courier, monospace;
     font-size: 1rem;
+}
+
+svg {
+    fill: $TertiaryLight;
+    width: 1rem;
+    
+    &:hover {
+        fill: $BackgroundDark;
+    }
 }
