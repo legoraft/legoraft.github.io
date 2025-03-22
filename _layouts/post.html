@@ -5,24 +5,24 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
-    
+
         <title>{{ page.title }} - {{ site.title }}</title>
         <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  
+
     </head>
-  
+
     <body>
-    
+
         {% include header.html %}
 
         <article>
             <h1 id="title">{{ page.title }}</h1>
-        
+
             {{ content }}
         </article>
-    
+
         {% include footer.html %}
-  
+
     </body>
 
 </html>

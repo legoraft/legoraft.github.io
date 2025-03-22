@@ -9,7 +9,7 @@ layout: default
             <h2>{{ post.date | date: "%Y" }}</h2>
             
             <ul class="post-list">
-            
+
             {% else %}
                 {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
                 {% capture nyear %}{{ post.next.date | date: "%Y" }}{% endcapture %}
@@ -21,12 +21,12 @@ layout: default
                 <ul class="post-list">
             {% endif %}
         {% endunless %}
-  
+
         <li>
             <p><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></p>
             <p id="date">{{ post.date | date: "%d - %m" }}</p>
         </li>
-  
+
     {% endfor %}
 
 </section>
