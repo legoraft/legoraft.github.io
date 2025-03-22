@@ -1,8 +1,7 @@
 $BackgroundDark: #1b2229;
 $SurfaceDark: #3f444a;
-$TertiaryLight: #5b6268;
-$SecondaryLight: #bbc2cf;
-$PrimaryLight: #eeeff1;
+$SecondaryLight: #5b6268;
+$PrimaryLight: #bbc2cf;
 $BrightBlue: #51afef;
 
 @font-face {
@@ -19,10 +18,13 @@ $BrightBlue: #51afef;
     padding: 0;
 }
 
-body {
+:root {
+    font-size: 17px;
     line-height: 1.5;
-    font-size: 14px;
     font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+body {
     max-width: 60ch;
     margin: 0 auto;
     background-color: $BackgroundDark;
@@ -41,7 +43,7 @@ header, footer {
     }
     
     svg {
-        fill: $TertiaryLight;
+        fill: $SecondaryLight;
         width: 1rem;
         
         &:hover {
@@ -55,7 +57,7 @@ header, footer {
 }
 
 section {
-    h3 {
+    h2 {
         margin: 1rem 0;
     }
     
@@ -78,7 +80,7 @@ section {
     
     p#date {
         font-family: "Source Code Pro", "Courier New", Courier, monospace;
-        color: $TertiaryLight;
+        color: $SecondaryLight;
     }
 }
 
