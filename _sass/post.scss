@@ -1,3 +1,5 @@
+@use "colors";
+
 // Post-specific CSS settings
 article {
     line-height: 2;
@@ -16,7 +18,7 @@ article {
     
     a {
         text-decoration: none;
-        color: $BrightBlue;
+        color: colors.$BrightBlue;
         
         &:hover {
             text-decoration: underline;
@@ -24,14 +26,14 @@ article {
     }
     
     code {
-        background-color: $SurfaceDark;
+        background-color: colors.$SurfaceDark;
         padding: 0.1rem 0.25rem;
         border-radius: 0.25rem;
     }
     
     pre {
         padding: 1rem;
-        background-color: $SurfaceDark;
+        background-color: colors.$SurfaceDark;
         border-radius: 1rem;
     }
 }

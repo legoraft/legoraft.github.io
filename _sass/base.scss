@@ -1,3 +1,5 @@
+@use "colors";
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +14,8 @@
 body {
     max-width: 60ch;
     margin: 0 auto;
-    background-color: $BackgroundDark;
-    color: $PrimaryLight;
+    background-color: colors.$BackgroundDark;
+    color: colors.$PrimaryLight;
 }
 
 header, footer {
@@ -28,11 +30,11 @@ header, footer {
     }
     
     svg {
-        fill: $SecondaryLight;
+        fill: colors.$SecondaryLight;
         width: 1rem;
         
         &:hover {
-            fill: $PrimaryLight;
+            fill: colors.$PrimaryLight;
         }
     }
     
