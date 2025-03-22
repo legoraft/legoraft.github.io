@@ -28,7 +28,7 @@ body {
     color: $BackgroundDark;
 }
 
-header {
+header, footer {
     padding: 2rem 0;
     display: flex;
     justify-content: space-between;
@@ -37,6 +37,15 @@ header {
     a {
         color: inherit;
         text-decoration: none;
+    }
+    
+    svg {
+        fill: $TertiaryLight;
+        width: 1rem;
+        
+        &:hover {
+            fill: $BackgroundDark;
+        }
     }
 }
 
@@ -92,13 +101,4 @@ p {
 code {
     font-family: "Source Code Pro", "Courier New", Courier, monospace;
     font-size: 1rem;
-}
-
-svg {
-    fill: $TertiaryLight;
-    width: 1rem;
-    
-    &:hover {
-        fill: $BackgroundDark;
-    }
 }
