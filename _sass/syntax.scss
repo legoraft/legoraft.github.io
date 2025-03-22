@@ -1,62 +1,42 @@
 .highlight {
-    // Comment
-    .c {
-        
+    // Comment, Comment.Multiline, Comment.Single
+    .c, .cm, .c1 {
+        color: #5b6268
     }
     
-    // Error
-    .err {
-        
+    // Error, Generic.Error, Generic.Traceback, Name.Exception
+    .ne, .gt, .gr, .err {
+        color: #ff6c6b;
     }
     
-    // Keyword
-    .k {
-        
+    // Keyword, Keyword.Constant, Keyword.Reserved, Keyword.Pseudo, Keyword.Declaration, Name.Builtin
+    .nb, .k, .kc, .kr, .kp, .kd {
+        color: #51afef;
     }
     
     // Operator
     .o {
-        
-    }
-    
-    // Comment.Multiline
-    .cm {
-        
+        color: #51afef;
     }
     
     // Comment.Preproc
     .cp {
-        
-    }
-    
-    // Comment.Single
-    .c1 {
-        
+        font-weight: bold;
     }
     
     // Comment.Special
     .cs {
-        
+        font-weight: bold;
     }
     
-    // Generic.Deleted
-    .gd {
-        
-    }
-    
-    // Generic.Deleted.Specific
-    .gd .x {
-        
+    // Generic.Deleted, Generic.Deleted.Specific
+    .gd, .gd .x {
+        color: #ff6c6b;
     }
     
     // Generic.Emph
     .ge {
-        
-    }
-    
-    // Generic.Error
-    .gr {
-        
+        font-style: italic;
     }
     
     // Generic.Heading
@@ -64,14 +44,9 @@
         
     }
     
-    // Generic.Inserted
-    .gi {
-        
-    }
-    
-    // Generic,Inserted.Specific
-    .gi .x {
-        
+    // Generic.Inserted, Generic.Inserted.Specific
+    .gi, .gi .x {
+        color: #98be65;
     }
     
     // Generic.Output
@@ -86,7 +61,7 @@
     
     // Generic.Strong
     .gs {
-        
+        font-weight: bold;
     }
     
     // Generic.Subheading
@@ -94,79 +69,35 @@
         
     }
     
-    // Generic.Traceback
-    .gt {
-        
-    }
-    
-    // Keyword.Constant
-    .kc {
-        
-    }
-    
-    // Keyword.Declaration
-    .kd {
-        
-    }
-    
-    // Keyword.Pseudo
-    .kp {
-        
-    }
-    
-    // Keyword.Reserved
-    .kr {
-        
-    }
-    
     // Keyword.Type
     .kt {
-        
+        color: #ecbe7b;
+        font-weight: bold;
     }
     
-    // Literal.Number
-    .m {
-        
+    // Literal.Number, Literal.Number.Float, Literal.Number.Hex, Literal.Number.Integer, Literal.Number.Oct, Literal.Number.Integer.Long
+    .m, .mf, .mh, .mi, .mo, .il {
+        color: #da8548;
     }
     
-    // Literal.String
-    .s {
-        
-    }
-    
-    // Name.Attribute
-    .na {
-        
-    }
-    
-    // Name.Builtin
-    .nb {
-        
+    // Literal.String, Literal.String.Backtick, Literal.String.Char, Literal.String.Doc, Literal.String.Double, Literal.String.Escape, Literal.String.Heredoc, Literal.String.Interpol, Literal.String.Other, Literal.String.Regex, Literal.String.Single, Literal.String.Symbol
+    .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
+        color: #98be65;
     }
     
     // Name.Class
     .nc {
-        
+        color: #ecbe7b;
     }
     
-    // Name.Constant
-    .no {
-        
-    }
-    
-    // Name.Entity
-    .ni {
-        
-    }
-    
-    // Name.Exception
-    .ne {
-        
+    // Name.Constant, Name.Entity, Name.Attribute
+    .no, .ni, .na {
+        color: #bbc2cf;
     }
     
     // Name.Function
     .nf {
-        
+        color: #c678dd;
     }
     
     // Name.Namespace
@@ -176,96 +107,16 @@
     
     // Name.Tag
     .nt {
-        
-    }
-    
-    // Name.Variable
-    .nv {
-        
+        color: #4bc4f7;
     }
     
     // Operator.Word
     .ow {
-        
+        font-weight: bold;
     }
     
     // Text.Whitespace
     .w {
-        
-    }
-    
-    // Literal.Number.Float
-    .mf {
-        
-    }
-    
-    // Literal.Number.Hex
-    .mh {
-        
-    }
-    
-    // Literal.Number.Integer
-    .mi {
-        
-    }
-    
-    // Literal.Number.Oct
-    .mo {
-        
-    }
-    
-    // Literal.String.Backtick
-    .sb {
-        
-    }
-    
-    // Literal.String.Char
-    .sc {
-        
-    }
-    
-    // Literal.String.Doc
-    .sd {
-        
-    }
-    
-    // Literal.String.Double
-    .s2 {
-        
-    }
-    
-    // Literal.String.Escape
-    .se {
-        
-    }
-    
-    // Literal.String.Heredoc
-    .sh {
-        
-    }
-    
-    // Literal.String.Interpol
-    .si {
-        
-    }
-    
-    // Literal.String.Other
-    .sx {
-        
-    }
-    
-    // Literal.String.Regex
-    .sr {
-        
-    }
-    
-    // Literal.String.Single
-    .s1 {
-        
-    }
-    
-    // Literal.String.Symbol
-    .ss {
         
     }
     
@@ -274,23 +125,8 @@
         
     }
     
-    // Name.Variable.Class
-    .vc {
-        
-    }
-    
-    // Name.Variable.Global
-    .vg {
-        
-    }
-    
-    // Name.Variable.Instance
-    .vi {
-        
-    }
-    
-    // Literal.Number.Integer.Long
-    .il {
-        
+    // Name.Variable.Class, Name.Variable.Global, Name.Variable.Instance, Name.Variable
+    .nv, .vc, .vg, .vi {
+        color: #bbc2cf;
     }
 }
