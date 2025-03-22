@@ -16,15 +16,6 @@ article {
         margin: 1rem 1rem;
     }
     
-    a {
-        text-decoration: none;
-        color: colors.$BrightBlue;
-        
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    
     code {
         background-color: colors.$SurfaceDark;
         padding: 0.1rem 0.25rem;
