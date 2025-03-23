@@ -20,13 +20,13 @@ You can select the Arch Linux installation option here and you'll be welcomed wi
 
 ## Setting up
 
-Before we go configuring our system, we need to set up a few small things. First, select your correct keyboard layout. The default layout is `us`, which I'll be using. You can list the available keyboard layouts with:
+Before we go configuring our system, we need to set up a few small things. First, select your correct keyboard layout. The default layout is `us`, which I'll be using. You can list the available keyboard layouts with
 
 ```
 localectl list-keymaps
 ```
 
-You can load the keys using:
+You can load the keys using
 
 ```
 loadkeys <keymap>
@@ -38,7 +38,7 @@ We'll also need to check if the system is booted in UEFI. This is important, as 
 cat /sys/firmware/efi/fw_platform_size
 ```
 
-If your system returns `64`, you're using a 64-bit system, `32` is a 32-bit system and if it returns a `No such file or directory` error, you're booted in BIOS and should try rebooting into UEFI.
+If your system returns `64`, you're using a 64-bit system, `32` is a 32-bit system and if it returns a `No such file or directory` error, you're booted in BIOS and should try rebooting into UEFI. You'll probably have a 64-bit system, as this is the modern standard.
 
 Last, we should set up internet. If you want to install over wifi, you should connect to your wifi network using [`iwctl`](https://wiki.archlinux.org/title/Iwd#iwctl). If you're using a network cable your internet should be working out of the box. Check your internet by running the `ping` command:
 
@@ -52,7 +52,7 @@ If this command returns five responses, your internet is fully up and running. N
 timedatectl
 ```
 
-If the time displayed is the same as the current UTC time, your clock is synchronised. If it isn't, you should run
+If the time displayed is the same as the current UTC time, your clock is synchronised. This clock probably won't show your local time, as linux almost always uses UTC time for the system clock. If it isn't the same as UTC, you should run
 
 ```
 timedatectl set-ntp true
@@ -62,9 +62,9 @@ to synchronise the clock with an NTP server, which keeps the clock up to date. A
 
 ## Partitioning
 
-To create a UEFI install of Arch Linux, two partitions are needed. These partitions are the root partition, also known as `/` and an EFI partition. The root partition is where all your files will reside and the EFI partition will just hold some firmware for the boot process and the boot loader. This partition doesn't have to be any bigger than 1 GB. If you don't have a lot of ram in the system, you can also add a `swap` partition to prevent running out of memory.
+To create a UEFI install of Arch Linux, two partitions are needed. These partitions are the root partition, also known as `/` and an EFI partition (often located at `/boot`. The root partition is where all your files will reside and the EFI partition will just hold some firmware for the boot process and the boot loader. This partition doesn't have to be any bigger than 1 GB. If you don't have a lot of ram in the system, you can also add a `swap` partition to prevent running out of memory.
 
-I'll be using the following partition layout for my drive. Remember that you can adjust the swap size accordingly.
+I'll be using the following partition layout for my drive (I don't have a lot of RAM on my laptop). Remember that you can adjust the swap size accordingly. [This document](https://docs.voidlinux.org/installation/live-images/partitions.html#swap-partitions) gives some extra info on swap sizing.
 
 | Mount point | Type             | Size      |
 | ----------- | ---------------- | --------- |
@@ -72,7 +72,9 @@ I'll be using the following partition layout for my drive. Remember that you can
 | \[SWAP\]    | Linux Swap       | 4 GB      |
 | /           | Linux filesystem | Full disk |
 
-With this partitioning scheme, we're ready to take a look at our disks. By running `lsblk`, we can see the disks that are in our system. These will probably be listed as `dev/sda` or `/dev/nvme0n1`. Be careful if you have multiple disks, as this will wipe your entire disk. Choose the disk you want and remember it's label. I'll be using `cfdisk` to partition the disk, as I think it's relatively easy to use. Run the following command to open `cfdisk`:
+With this partitioning scheme, we're ready to take a look at our disks. By running `lsblk`, we can see the disks that are in our system. These will probably be listed as `dev/sda` or `/dev/nvme0n1`.
+
+Be careful if you have multiple disks, as this will wipe your entire disk. Choose the disk you want and remember it's label. I'll be using `cfdisk` to partition the disk, as I think it's relatively easy to use. Run the following command to open `cfdisk`:
 
 ```
 cfdisk /dev/<disk name>
