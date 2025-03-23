@@ -1,9 +1,10 @@
 :root {
     --background: #eceff4;
     --surface: #d8dee9;
-    
-    --secondary: #4c566a;
+
     --primary: #2e3440;
+    --secondary-opaque: 76, 86, 106;
+    --secondary: rgba(var(--secondary-opaque), 0.6);
     
     --accent: #5e81ac;
 }
@@ -13,8 +14,9 @@
         --background: #2e3440;
         --surface: #3b4252;
         
-        --secondary: #d8dee9;
         --primary: #eceff4;
+        --secondary-opaque: 216, 222, 233;
+        --secondary: rgba(var(--secondary-opaque), 0.6);
         
         --accent: #88c0d0;
     }
