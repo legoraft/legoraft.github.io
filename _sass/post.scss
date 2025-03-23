@@ -38,4 +38,10 @@ article {
     img {
         max-width: 100%;
     }
+    
+    blockquote {
+        margin-left: 0.5rem;
+        padding-left: 0.5rem;
+        border-left: 0.25rem solid var(--accent);
+    }
 }
