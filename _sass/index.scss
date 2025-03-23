@@ -25,7 +25,7 @@ section {
     
     p#date {
         font-family: "Source Code Pro", "Courier New", Courier, monospace;
-        color: colors.$Secondary;
+        color: var(--secondary);
     }
 }
 

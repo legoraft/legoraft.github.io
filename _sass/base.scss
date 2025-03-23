@@ -14,8 +14,8 @@
 body {
     max-width: 60ch;
     margin: 0 auto;
-    background-color: colors.$Background;
-    color: colors.$Primary;
+    background-color: var(--background);
+    color: var(--primary);
 }
 
 header, footer {
@@ -34,11 +34,11 @@ header, footer {
     }
     
     svg {
-        fill: colors.$Secondary;
+        fill: var(--secondary);
         width: 1rem;
         
         &:hover {
-            fill: colors.$Primary;
+            fill: var(--primary);
         }
     }
     
@@ -79,7 +79,7 @@ code {
 
 a {
     text-decoration: none;
-    color: colors.$Accent;
+    color: var(--accent);
     
     &:hover {
         text-decoration: underline;

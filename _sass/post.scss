@@ -17,14 +17,14 @@ article {
     }
     
     code {
-        background-color: colors.$Surface;
+        background-color: var(--surface);
         padding: 0.1rem 0.25rem;
         border-radius: 0.25rem;
     }
     
     pre {
         padding: 1rem;
-        background-color: colors.$Surface;
+        background-color: var(--surface);
         border-radius: 1rem;
     }
 }
