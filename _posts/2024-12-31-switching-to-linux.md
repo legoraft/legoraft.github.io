@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Switching to Linux"
+author: legoraft
 updated: 2024-12-31 18:30:00
 ---
 

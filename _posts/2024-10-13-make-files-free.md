@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Make your files free (as in freedom)"
+author: legoraft
 updated: 2024-12-31 18:34:00
 ---
 

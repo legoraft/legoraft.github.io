@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Why versioning is important"
+author: legoraft
 updated: 2024-09-29 22:02:00
 ---
 
