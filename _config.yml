@@ -1,12 +1,21 @@
 url: "legoraft.com"
 baseurl: "/"
+permalink: /posts/:title
 timezone: Europe/Amsterdam
 
 title: "Legoraft's blog"
-author: "Legoraft"
+description: "My personal blog, where I write about things I find interesting and stuff I like."
 
-permalink: /posts/:title
+author: "Legoraft"
+logo: "/assets/icons/logo.png"
+social:
+  name: Legoraft
+  links:
+    - https://mastodon.social/@legoraft
+    - https://github.com/legoraft
+    - https://codeberg.org/legoraft
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
