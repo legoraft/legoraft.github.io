@@ -80,13 +80,15 @@ Be careful if you have multiple disks, as this will wipe your entire disk. Choos
 cfdisk /dev/<disk name>
 ```
 
-In cfdisk, we'll choose a GPT partition table and we can start partitioning the disk. If you see multiple partitions on the disk, make sure to delete them all so you can follow the partitioning scheme laid out above. Create the boot partition first, then the swap partition and use the rest of the disk for the root partition.
+In cfdisk, we'll choose a GPT partition table and we can start partitioning the disk. If you see multiple partitions on the disk, make sure to delete them all so you can follow the partitioning scheme laid out above. 
 
-You'll also need to set the partition types. You can do this by selecting your partition, selecting type and choosing the correct type. The types are also listed in the partitioning scheme. After creating the partitions and setting the types, write the changes and quit `cfdisk`.
+Make sure you create the boot partition first, then the swap partition and use the rest of the disk for the root partition. You can add a new partition by selecting the 'new' option in `cfdisk`, and giving the size by typing `<number>G` in the input to specify the amount of gigabytes (this also works for megabytes with `M`).
 
-Now, we'll format the disks. I'll start off with the main partition, as that's the more difficult one. We'll use the `btrfs` filesystem to create system backups easily. First, run the `lsblk` command again to take a look at your partitions and their new names. They should be formatted as `/dev/sdaX` or `/dev/nvme0n1pX`. Remember the number of the root partition for the next step.
+You'll also need to set the partition types. You can do this by selecting your partition, selecting type and choosing the correct type. The types are also listed in the partitioning scheme. After creating the partitions and setting the types, write the changes and quit `cfdisk`. Make sure these changes are written, it will delete the partition theme otherwise.
 
-To make a btrfs root partition, start by running:
+Now, we'll format the disks. I'll start off with the main partition, as that's the more difficult one. We'll use the `btrfs`[^1] filesystem to create system backups easily.
+
+First, run the `lsblk` command again to take a look at your partitions and their new names. They should be formatted as `/dev/sdaX` or `/dev/nvme0n1pX`. Remember the number of the root partition for the next step. To make a btrfs root partition, start by running:
 
 ```
 makefs.btrfs -L <label> /dev/<root-partition>
@@ -104,7 +106,13 @@ After mounting, we'll create the `@` volume for root, `@home` for the home folde
 btrfs subvolume create /mnt/<volume>
 ```
 
-After creating the volumes, unmount the disk by running
+After creating the volumes, check if all are there by running
+
+```
+btrfs subvolume list /mnt
+```
+
+Then, you can unmount the disk by running
 
 ```
 umount /mnt
@@ -146,7 +154,7 @@ mount /dev/<boot-partition> /mnt/boot
 swapon /dev/<swap-partition>
 ```
 
-Now, we're ready to bootstrap the system and finish up our installation. We'll start by running `pacstrap` and installing some base system utilities. Remember to also install the microcode update for your processor, either `intel-ucode` or `amd-ucode`. The other tools listed are needed for our installation.
+Now, we're ready to bootstrap the system and finish up our installation. We'll start by running `pacstrap` and installing some base system utilities. Remember to also install the microcode update for your processor, either `intel-ucode` or `amd-ucode`. The other tools listed are needed for our installation. You can also choose to use another kernel[^2]. If you're not sure about that, you should just use the `linux` kernel.
 
 ```
 pacstrap -K /mnt base linux linux-firmware <microcode> base-devel nano networkmanager
@@ -158,7 +166,9 @@ Replace the `<microcode>` section with your preferred microcode package and run 
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
-After running the command, take a look at the file using the `cat` command. Check if the partitions created earlier are listed.
+This will generate the `fstab` from our currently mounted disks, making sure the setup is exactly the same as we've made it now.
+
+After running the command, take a look at the file using the `cat` command. Check if the partitions created earlier are listed. If they aren't, check if everything is mounted.
 
 After doing that, we can `chroot` into the system and finish up the installation:
 
@@ -192,7 +202,7 @@ Remove the `#` from the locales you want to install. I'm installing the `en_US.U
 nano /etc/locale.conf
 ```
 
-If you're just using one locale, you can add just one line to the `locale.conf` file (for all configuration options in the `locale.conf`, check out [this]):
+If you're just using one locale, you can add just one line to the `locale.conf` file (for all configuration options in the `locale.conf`, check out [this](https://wiki.archlinux.org/title/Locale#Variables)):
 
 ```
 # Single locale
@@ -209,7 +219,7 @@ We also need to set up the network installation. First, add a hostname to your s
 nano /etc/hostname
 ```
 
-Add your hostname in this file, it should be just a single line and not contain any spaces.
+Add your hostname in this file, it should be just a single line and not contain any spaces. This can be any name you want your computer to be.
 
 To make `localhost` working in web browsers, we need to edit the `hosts` file:
 
@@ -217,15 +227,13 @@ To make `localhost` working in web browsers, we need to edit the `hosts` file:
 nano /etc/hosts
 ```
 
-Add the following lines to the file:
+Add the following lines to the file (this will just link the local ip to the `localhost` domain):
 
 ```
 127.0.0.1    localhost
 ::1          localhost
+127.0.1.1    <hostname>
 ```
-
-> [!faq] Note
-> Another line should be added, not sure which.
 
 To finish up our install, enable the `NetworkManager` service so it runs automatically. If you're connected through Wi-Fi, you probably need to reconnect to your network through network manager and its `nmcli` or `nmtui`. Enable `NetworkManager`:
 
@@ -233,12 +241,9 @@ To finish up our install, enable the `NetworkManager` service so it runs automat
 systemctl enable NetworkManager
 ```
 
-> [!faq] Note
-> Wi-Fi could be enabled from install and reboot, `nmcli` should be usable in `chroot`.
-
 It should return a few lines, which shows the service being enabled.
 
-Now, let's add a boot loader to boot into our system. I'll be using `systemd-boot`, because I like it more. GRUB is also an option, which can be installed following this [tutorial].
+Now, let's add a boot loader to boot into our system. I'll be using `systemd-boot`, because I like it more (and it's installed by default). GRUB is also an option, which can be installed following this [tutorial](https://wiki.archlinux.org/title/GRUB).
 
 Start installing `systemd-boot` with the following command:
 
@@ -275,16 +280,9 @@ initrd   /initramfs-linux.img
 options  root=UUID=<UUID> rootflags=subvol=@ rw
 ```
 
-You can get the UUID of your root partition by running the following command:
+This entry will be named 'Arch Linux', will first look for the correct linux image, then load the microcode and the filesystem. After that, it will read our root filesystem, which is the `@` subvolume on the correct disk UUID[^3]. If you've installed a different kernel, make sure you are using the correct `linux` file (you can find it by just running `ls /mnt/boot`.
 
-```
-blkid /dev/<root-partition>
-```
-
-You can also append the output to your file by using `>> /boot/loader/entries/arch.conf`. Make sure to remove everything that isn't a UUID from the text, otherwise your entry won't work. After creating the entry, we can move on to creating a user and rebooting.
-
-> [!faq] Note
-> Should this be explained?
+After creating the entry, we can move on to creating a user and rebooting.
 
 ## User creation
 
@@ -300,7 +298,7 @@ This will add a user with a home directory, add the user to the `wheel` group an
 EDITOR=nano visudo
 ```
 
-In this file, we need to look for the following line and remove the `#` from the front:
+In this file, we need to look for the following line and remove the `#` from the front (don't use the variant with `NOPASSWD`, as this won't require a password and is insecure):
 
 ```
 %wheel ALL=(ALL:ALL) ALL
@@ -312,15 +310,17 @@ At last, create a password for your user using the `passwd` command:
 passwd <username>
 ```
 
-Enter your password, and the user setup is done! You can check if the `sudo` command works by logging in as the user using `su <username>` check if you can edit a file using `nano` and enter your password. If everything works, you can `exit` and we'll round up the install.
+Enter your password, and the user setup is done! You can check if the `sudo` command works by logging in as the user using `su <username>` check if you can edit a file using `sudo nano` and enter your password. If everything works, you can `exit` and we'll round up the install.
 
-First, exit the `chroot` environment by running `exit`. Next, we'll unmount all the disk by running `umount -R /mnt`. You can ignore any errors. You can run `reboot`, but I prefer shutting down, removing my USB and starting the computer myself. You can do this by running:
+First, exit the `chroot` environment by running `exit`. Next, we'll unmount all the disk by running `umount -R /mnt`. You can ignore any errors. You can run `reboot`, but I prefer shutting down, removing my USB and starting the computer myself. You can do this by running one of the following:
 
 ```
 shutdown now
+
+reboot
 ```
 
-After shutting down, remove the USB and start the computer. You should be welcomed by `systemd-boot` and a login screen after that. Congratulations! You've installed Arch Linux and we'll set up our backups next.
+After shutting down, remove the USB and start the computer. You should be welcomed by `systemd-boot` and a text-based login screen after that. Congratulations! You've installed Arch Linux and we'll set up our backups next.
 
 ## Backups
 
@@ -345,10 +345,10 @@ sudo rm -r /.snapshots
 After removing the directory, we can configure snapper.
 
 ```
-sudo snapper -c <config> /
+sudo snapper -c <config> create-config /
 ```
 
-You can name your config anything, I'm just using `root` to reference the root partition. After this, a new `.snapshots` subvolume is created. We'll need to delete this and re-add our own subvolume.
+You can name your config anything, I'm just using `root` to reference the root partition. After this, a new `.snapshots` subvolume is created. We'll need to delete this and re-add our own subvolume. If the first command doesn't work, you'll probably need to use `/.snapshots` instead of `.snapshots`.
 
 ```
 sudo btrfs subvolume delete .snapshots
@@ -364,8 +364,38 @@ sudo mount -a
 
 If we update the system or install a new package, backups will be made automatically and we can restore the system state if something goes sideways.
 
-> [!fail] Note
-> Dunno if commands are correct in this section, should check on the blog post I've found. Also should take a look if a subvolume can't be specified from the start.
+We should also configure some simple rules for our back-ups, to prevent our drive getting clogged up with back-ups. You can do this by editing `/etc/snapper/configs/<config>`. I'll be changing the following variables:
 
-> [!faq] Note
-> Maybe create a small blog post explaining how to ‘save' a broken arch system and restore a backup? Seems like a handy thing to know.
+```
+NUMBER_CLEANUP=yes
+NUMBER_LIMIT=3
+NUMBER_LIMIT_IMPORTANT=5
+
+TIMELINE_CREATE=yes
+TIMELINE_MIN_AGE="1800"
+TIMELINE_LIMIT_HOURLY="3"
+TIMELINE_LIMIT_DAILY="2"
+TIMELINE_LIMIT_WEEKLY="0"
+TIMELINE_LIMIT_MONTHLY="0"
+TIMELINE_LIMIT_YEARLY="0"
+```
+
+This will create automatic back-ups, where 3 are kept every hour and 2 daily back-ups are kept. We'll also save 3 normal back-ups (which `snap-pac` creates) and 5 important back-ups.
+
+We can test our new snapper backups by running the following command and creating a backup for the base install of our Arch system:
+
+```
+sudo snapper -c <config> create -u important=yes -d "Base system installation"
+```
+
+This will create an important backup (of which 5 will be kept) and give it a description of 'Base system installation'.
+
+## Next steps
+
+
+
+[^1]: Btrfs is a filesystem that allows you to take snapshots of your filesystem very easily. This makes rolling back previous versions easy and makes the Arch experience a bit more stable.
+
+[^2]: The kernel contains software that's essential for your system. You can choose between a few different once, as they're listed [here](https://wiki.archlinux.org/title/Kernel#Officially_supported_kernels).
+
+[^3]: The UUID can be found by running `blkid /dev/<root-partition>`. The UUID should be a string of letters and numbers. You can copy the output of this command by running `blkid /dev/<root-partition> >> /mnt/boot/loader/entries/arch.conf`, but you need to remove all other text from the UUID.
