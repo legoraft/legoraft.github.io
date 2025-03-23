@@ -1,27 +1,40 @@
 .highlight {
+    --red: #bf616a;
+    --orange: #d08770;
+    --yellow: #ebcb8b;
+    --green: #a3be8c;
+    --purple: #b48ead;
+    --cyan: #8fbcbb;
+    --bright-cyan: #88c0d0;
+    --bright-blue: #81a1c1;
+    --blue: #5e81ac;
+    --primary: #eceff4;
+    --secondary: #d8dee9;
+    --dark-gray: #4c566a;
+    
     // Comment, Comment.Multiline, Comment.Single
     .c, .cm, .c1 {
-        color: #5b6268
+        color: var(--dark-gray)
     }
     
     // Error, Generic.Error, Generic.Traceback, Name.Exception
     .ne, .gt, .gr, .err {
-        color: #ff6c6b;
+        color: var(--red);
     }
     
     // Keyword, Keyword.Constant, Keyword.Reserved, Keyword.Pseudo, Keyword.Declaration, Name.Builtin
     .nb, .k, .kc, .kr, .kp, .kd {
-        color: #51afef;
+        color: var(--bright-blue);
     }
     
     // Operator
     .o {
-        color: #51afef;
+        color: var(--bright-blue);
     }
     
     // Comment.Preproc
     .cp {
-        font-weight: bold;
+        font-weight: var(--blue);
     }
     
     // Comment.Special
@@ -31,7 +44,7 @@
     
     // Generic.Deleted, Generic.Deleted.Specific
     .gd, .gd .x {
-        color: #ff6c6b;
+        color: var(--red);
     }
     
     // Generic.Emph
@@ -46,7 +59,7 @@
     
     // Generic.Inserted, Generic.Inserted.Specific
     .gi, .gi .x {
-        color: #98be65;
+        color: var(--green);
     }
     
     // Generic.Output
@@ -71,33 +84,32 @@
     
     // Keyword.Type
     .kt {
-        color: #ecbe7b;
-        font-weight: bold;
+        color: var(--cyan);
     }
     
     // Literal.Number, Literal.Number.Float, Literal.Number.Hex, Literal.Number.Integer, Literal.Number.Oct, Literal.Number.Integer.Long
     .m, .mf, .mh, .mi, .mo, .il {
-        color: #da8548;
+        color: var(--purple);
     }
     
     // Literal.String, Literal.String.Backtick, Literal.String.Char, Literal.String.Doc, Literal.String.Double, Literal.String.Escape, Literal.String.Heredoc, Literal.String.Interpol, Literal.String.Other, Literal.String.Regex, Literal.String.Single, Literal.String.Symbol
     .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
-        color: #98be65;
+        color: var(--green);
     }
     
     // Name.Class
     .nc {
-        color: #ecbe7b;
+        color: var(--cyan);
     }
     
     // Name.Constant, Name.Entity, Name.Attribute
     .no, .ni, .na {
-        color: #bbc2cf;
+        color: var(--secondary);
     }
     
     // Name.Function
     .nf {
-        color: #c678dd;
+        color: var(--bright-cyan);
     }
     
     // Name.Namespace
@@ -107,7 +119,7 @@
     
     // Name.Tag
     .nt {
-        color: #4bc4f7;
+        color: var(--bright-blue);
     }
     
     // Operator.Word
@@ -127,6 +139,6 @@
     
     // Name.Variable.Class, Name.Variable.Global, Name.Variable.Instance, Name.Variable
     .nv, .vc, .vg, .vi {
-        color: #bbc2cf;
+        color: var(--secondary);
     }
 }
