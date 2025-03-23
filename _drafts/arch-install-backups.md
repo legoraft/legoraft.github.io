@@ -6,12 +6,6 @@ updated: 2025-03-22 17:12:00
 
 Arch Linux is often referred to as one of the ‘hardest' Linux distributions to learn, but that isn't really true. If you can follow instructions thoroughly and are willing to learn things about your Linux system, Arch can be quite simple. This blog post will try to help with that, where I run you through a basic Arch Linux installation and teach you some of the ins and outs of the Linux system. We'll be setting up our system with `btrfs` and `systemd-boot` (I'll explain what those are a bit later). We'll also be enabling backups and exploring some GUI stuff.
 
-> [!todo]
-> The vibe and tone of this article should be adjusted, am I targeting beginners or more advanced users? Should I add some extra definitions in footnotes to explain things further
-
-> [!todo]
-> The styling of this article needs to be adjusted, especially in reference to the code blocks. I can also write a style guide for myself in the repo of the site.
-
 ## Booting
 
 You can start installing Arch by preparing a bootable USB disk with the Arch Linux iso. You can download it from the [website](https://archlinux.org/download/) and flash it to the USB disk by using a tool like [Etcher](https://etcher.balena.io/). After doing this, you can select your drive in your motherboard's boot menu and booting to it.
