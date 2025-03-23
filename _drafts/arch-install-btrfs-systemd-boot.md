@@ -392,10 +392,25 @@ This will create an important backup (of which 5 will be kept) and give it a des
 
 ## Next steps
 
+Next, you'll probably want to install some GUI to make the black terminal go away. I want to preface this with the following: A lot of pieces of a Linux install are choices and opinions. I've already pushed some user choices by running Arch, using the normal kernel and using snapper for back-ups. Linux has almost infinite choices for your system and for the graphical interface it also has a lot of choice.
 
+I'd want you to figure out whatever GUI suits you. That's why I'll lay a few out for you, and you can take a look at them. You can install each GUI with `pacman -S <package>` and remove it if you don't like it with `pacman -Rns <package>`. So let's go on to the list:
+
+- [GNOME](https://wiki.archlinux.org/title/GNOME) is a desktop environment which focuses on simple user experience and good design, you download the large metapackage and are good to go.
+- [KDE](https://wiki.archlinux.org/title/KDE) is another desktop environment that focuses more on being able to modify a lot of settings.
+- [Xfce](https://wiki.archlinux.org/title/Xfce) is a light-weight desktop environment which doesn't have the best looks out of the box.
+- [Cinnamon](https://wiki.archlinux.org/title/Cinnamon) is a windows-like desktop environment that's also easy to use.
+- [Wayland](https://wiki.archlinux.org/title/Wayland) is a library for compositors, which allows you to mix-and-match different compositors, bars and other applications. You can fully design your own desktop experience[^4].
+- [Xorg](https://wiki.archlinux.org/title/Xorg) is the older brother of Wayland, it has been around for about 20 years and wayland is aiming to replace it. A lot of people[^4] are still using xorg and it is still a valid choice.
+
+All these options have ups and downs, but if you've never used Linux (and to be fair, why are you installing Arch right away?) a desktop environment is the quickest way to get set up. Window managers and compositors are awesome, and I've recently switched to [Hyprland](https://hyprland.org/). Window managers do take a lot more time to configure nicely and will take more tweaking. I've recently made my [dotfiles](https://codeberg.org/legoraft/dots) a bit more coherent, so you can check out those and the [docs](https://codeberg.org/legoraft/dots/src/branch/main/docs) if you're interested in learning a bit more about that.
+
+I hope your Arch install is running great and you've found the GUI of your liking. The great thing of something like Linux is the ability to switch around those things whenever, so it's always awesome. If you'd want to read a bit more on Linux and Linux distros I'd recommend, check out [this](/posts/switching-to-linux) post.
 
 [^1]: Btrfs is a filesystem that allows you to take snapshots of your filesystem very easily. This makes rolling back previous versions easy and makes the Arch experience a bit more stable.
 
 [^2]: The kernel contains software that's essential for your system. You can choose between a few different once, as they're listed [here](https://wiki.archlinux.org/title/Kernel#Officially_supported_kernels).
 
 [^3]: The UUID can be found by running `blkid /dev/<root-partition>`. The UUID should be a string of letters and numbers. You can copy the output of this command by running `blkid /dev/<root-partition> >> /mnt/boot/loader/entries/arch.conf`, but you need to remove all other text from the UUID.
+
+[^4]: Check out [unixporn](https://reddit.com/r/unixporn) (it's SFW, I swear). People customize the heck out of their computers and some stuff looks great. It does require a lot of configuration and tweaking (you'll be mostly working on your desktop experience in stead of doing work).
