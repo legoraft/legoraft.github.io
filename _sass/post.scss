@@ -44,4 +44,16 @@ article {
         padding-left: 0.5rem;
         border-left: 0.25rem solid var(--accent);
     }
+    
+    table {
+        margin: 1rem 0;
+        border-collapse: collapse;
+        border-style: hidden;
+        
+        th, td {
+            border: 1px solid white;
+            padding: 0.25rem 0.5rem;
+            text-align: left;
+        }
+    }
 }
