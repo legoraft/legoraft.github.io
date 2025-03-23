@@ -6,7 +6,7 @@ timezone: Europe/Amsterdam
 title: "Legoraft's blog"
 description: "My personal blog, where I write about things I find interesting and stuff I like."
 
-author: "legoraft"
+author: legoraft
 logo: "/assets/logo/lr-logo-transparent.png"
 social:
   name: Legoraft
