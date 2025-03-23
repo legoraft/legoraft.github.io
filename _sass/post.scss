@@ -22,7 +22,20 @@ article {
     
     pre {
         padding: 1rem;
-        background-color: var(--surface);
         border-radius: 1rem;
+        overflow: scroll;
+        margin: 1rem 0;
+        
+        code {
+            background-color: transparent;
+        }
+    }
+    
+    input {
+        margin-right: 1rem;
+    }
+    
+    img {
+        max-width: 100%;
     }
 }

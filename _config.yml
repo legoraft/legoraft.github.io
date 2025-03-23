@@ -1,4 +1,4 @@
-url: "legoraft.com"
+url: "https://legoraft.com"
 baseurl: "/"
 permalink: /posts/:title
 timezone: Europe/Amsterdam

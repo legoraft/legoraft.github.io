@@ -12,6 +12,10 @@
     --secondary: #d8dee9;
     --dark-gray: #4c566a;
     
+    background-color: #3b4252;
+    border-radius: 1rem;
+    color: var(--primary);
+    
     // Comment, Comment.Multiline, Comment.Single
     .c, .cm, .c1 {
         color: var(--dark-gray)
