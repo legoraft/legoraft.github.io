@@ -199,7 +199,7 @@ nano /etc/locale.conf
 
 If you're just using one locale, you can add just one line to the `locale.conf` file (for all configuration options in the `locale.conf`, check out [this](https://wiki.archlinux.org/title/Locale#Variables)):
 
-```
+```bash
 # Single locale
 LANG=en_US.UTF-8
 
