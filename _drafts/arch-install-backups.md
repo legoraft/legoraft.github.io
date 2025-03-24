@@ -1,14 +1,15 @@
 ---
 layout: post
 title: "Installing Arch Linux with backups"
-updated: 2025-03-22 17:12:00
+author: legoraft
+updated: 2025-03-24 10:19:00
 ---
 
 Arch Linux is often referred to as one of the ‘hardest' Linux distributions to learn, but that isn't really true. If you can follow instructions thoroughly and are willing to learn things about your Linux system, Arch can be quite simple. This blog post will try to help with that, where I run you through a basic Arch Linux installation and teach you some of the ins and outs of the Linux system. We'll be setting up our system with `btrfs` and `systemd-boot` (I'll explain what those are a bit later). We'll also be enabling backups and exploring some GUI stuff.
 
 ## Booting
 
-You can start installing Arch by preparing a bootable USB disk with the Arch Linux iso. You can download it from the [website](https://archlinux.org/download/) and flash it to the USB disk by using a tool like [Etcher](https://etcher.balena.io/). After doing this, you can select your drive in your motherboard's boot menu and booting to it.
+You can start installing Arch by preparing a bootable USB disk with the Arch Linux iso. You can download it from the [website](https://archlinux.org/download/) and flash it to the USB disk by using a tool like [Etcher](https://etcher.balena.io/). After doing this, you can select your drive in your motherboard's boot menu and boot to it.
 
 You can select the Arch Linux installation option here and you'll be welcomed with a black screen and a small welcome message. You can now start installing Arch Linux! We're going to install Arch the 'hard' way, but if you're not interested in learning some new things about the Linux system, [`archinstall`](https://wiki.archlinux.org/title/Archinstall) also exists. This gives you a simple, guided setup to be up and running as soon as possible.
 
@@ -56,9 +57,9 @@ to synchronise the clock with an NTP server, which keeps the clock up to date. A
 
 ## Partitioning
 
-To create a UEFI install of Arch Linux, two partitions are needed. These partitions are the root partition, also known as `/` and an EFI partition (often located at `/boot`. The root partition is where all your files will reside and the EFI partition will just hold some firmware for the boot process and the boot loader. This partition doesn't have to be any bigger than 1 GB. If you don't have a lot of ram in the system, you can also add a `swap` partition to prevent running out of memory.
+To create a UEFI install of Arch Linux, two partitions are needed. These partitions are the root partition, also known as `/` and an EFI partition (often located at `/boot`). The root partition is where all your files will reside and the EFI partition will just hold some firmware for the boot process and the boot loader. This partition doesn't have to be any bigger than 1 GB. If you don't have a lot of ram in the system, you can also add a `swap` partition to prevent running out of memory.
 
-I'll be using the following partition layout for my drive (I don't have a lot of RAM on my laptop). Remember that you can adjust the swap size accordingly. [This document](https://docs.voidlinux.org/installation/live-images/partitions.html#swap-partitions) gives some extra info on swap sizing.
+I'll be using the following partition layout for my laptop (I don't have a lot of RAM on there). Remember that you can adjust the swap size accordingly. [This document](https://docs.voidlinux.org/installation/live-images/partitions.html#swap-partitions) gives some extra info on swap sizing.
 
 | Mount point | Type             | Size      |
 | ----------- | ---------------- | --------- |
@@ -66,19 +67,19 @@ I'll be using the following partition layout for my drive (I don't have a lot of
 | \[SWAP\]    | Linux Swap       | 4 GB      |
 | /           | Linux filesystem | Full disk |
 
-With this partitioning scheme, we're ready to take a look at our disks. By running `lsblk`, we can see the disks that are in our system. These will probably be listed as `dev/sda` or `/dev/nvme0n1`.
+With this partitioning scheme, we're ready to take a look at our disks. By running `lsblk`, we can see the disks that are in our system. These will probably be listed as `/dev/sda` or `/dev/nvme0n1`.
 
 Be careful if you have multiple disks, as this will wipe your entire disk. Choose the disk you want and remember it's label. I'll be using `cfdisk` to partition the disk, as I think it's relatively easy to use. Run the following command to open `cfdisk`:
 
 ```
-cfdisk /dev/<disk name>
+cfdisk /dev/<disk label>
 ```
 
 In cfdisk, we'll choose a GPT partition table and we can start partitioning the disk. If you see multiple partitions on the disk, make sure to delete them all so you can follow the partitioning scheme laid out above. 
 
 Make sure you create the boot partition first, then the swap partition and use the rest of the disk for the root partition. You can add a new partition by selecting the 'new' option in `cfdisk`, and giving the size by typing `<number>G` in the input to specify the amount of gigabytes (this also works for megabytes with `M`).
 
-You'll also need to set the partition types. You can do this by selecting your partition, selecting type and choosing the correct type. The types are also listed in the partitioning scheme. After creating the partitions and setting the types, write the changes and quit `cfdisk`. Make sure these changes are written, it will delete the partition theme otherwise.
+You'll also need to set the partition types. You can do this by selecting your partition, selecting type and choosing the correct type. The types are also listed in the partitioning scheme. After creating the partitions and setting the types, write the changes and quit `cfdisk`. Make sure these changes are written, it will delete the partition scheme otherwise.
 
 Now, we'll format the disks. I'll start off with the main partition, as that's the more difficult one. We'll use the `btrfs`[^1] filesystem to create system backups easily.
 
@@ -100,7 +101,7 @@ After mounting, we'll create the `@` volume for root, `@home` for the home folde
 btrfs subvolume create /mnt/<volume>
 ```
 
-After creating the volumes, check if all are there by running
+After creating the volumes, check if all are there by running the following:
 
 ```
 btrfs subvolume list /mnt
@@ -213,7 +214,7 @@ We also need to set up the network installation. First, add a hostname to your s
 nano /etc/hostname
 ```
 
-Add your hostname in this file, it should be just a single line and not contain any spaces. This can be any name you want your computer to be.
+Add your hostname in this file, it should be just a single line and not contain any spaces. This can be any name you want your computer to have.
 
 To make `localhost` working in web browsers, we need to edit the `hosts` file:
 
@@ -258,7 +259,7 @@ default    arch-*
 timeout    5
 ```
 
-This shows the boot menu for 5 seconds and add all `arch-*` files to the boot entries. Now, let's create our boot entry. Create the `arch.conf` file:
+This shows the boot menu for 5 seconds and add all files containing `arch` to the boot entries. Now, let's create our boot entry by creating the `arch.conf` file:
 
 ```
 nano /boot/loader/entries/arch.conf
@@ -274,7 +275,7 @@ initrd   /initramfs-linux.img
 options  root=UUID=<UUID> rootflags=subvol=@ rw
 ```
 
-This entry will be named 'Arch Linux', will first look for the correct linux image, then load the microcode and the filesystem. After that, it will read our root filesystem, which is the `@` subvolume on the correct disk UUID[^3]. If you've installed a different kernel, make sure you are using the correct `linux` file (you can find it by just running `ls /mnt/boot`.
+This entry will be named 'Arch Linux', will first look for the correct linux image, then load the microcode and the filesystem. After that, it will read our root filesystem, which is the `@` subvolume on the correct disk UUID[^3]. If you've installed a different kernel, make sure you are using the correct `linux` and `initramfs` files (you can find it by just running `ls /mnt/boot`.
 
 After creating the entry, we can move on to creating a user and rebooting.
 
@@ -308,9 +309,11 @@ Enter your password, and the user setup is done! You can check if the `sudo` com
 
 First, exit the `chroot` environment by running `exit`. Next, we'll unmount all the disk by running `umount -R /mnt`. You can ignore any errors. You can run `reboot`, but I prefer shutting down, removing my USB and starting the computer myself. You can do this by running one of the following:
 
-```
+```bash
+# Shuts down the system
 shutdown now
 
+# Reboots the system
 reboot
 ```
 
@@ -318,7 +321,19 @@ After shutting down, remove the USB and start the computer. You should be welcom
 
 ## Backups
 
-After starting the new system, we want to enable simple backups for our system. Arch is bleeding-edge, so it can break at times and having a good backup strategy helps to keep te experience smooth and stable. We'll be using `snapper` for backups, because it's simple and uses `btrfs`, which matches with our filesystem. You can also use a tool like `timeshift`, which has a GUI to restore backups.
+After restarting the system, check if your system still has internet by running the `ping` command:
+
+```
+ping -c 5 archlinux.org
+```
+
+If you’re getting any errors and set up your system over Wi-Fi, you should run `nmtui` to connect to your Wi-Fi again. After doing this, it will connect automatically on startup. You can now check f your system is fully up-to-date (it should be) by running the following:
+
+```
+sudo pacman -Syu
+```
+
+This is also the correct way to update your system. Now, we want to enable simple backups for our system. Arch is bleeding-edge, so it can break at times and having a good backup strategy helps to keep te experience smooth and stable. We'll be using `snapper` for backups, because it's simple and uses `btrfs`, which matches with our filesystem. You can also use a tool like `timeshift`, which has a GUI to restore backups.
 
 Start off by installing `snapper` and `snap-pac`. Snapper is the utility we'll be using and `snap-pac` will automatically create snapshots upon installing a program or doing a system update.
 
@@ -386,7 +401,7 @@ This will create an important backup (of which 5 will be kept) and give it a des
 
 ## Next steps
 
-Next, you'll probably want to install some GUI to make the black terminal go away. I want to preface this with the following: A lot of pieces of a Linux install are choices and opinions. I've already pushed some user choices by running Arch, using the normal kernel and using snapper for back-ups. Linux has almost infinite choices for your system and for the graphical interface it also has a lot of choice.
+Next, you'll probably want to install some GUI to make the black terminal go away. I want to preface this with the following: A lot of parts of a Linux install are choices and opinions. I've already pushed some user choices by running Arch, using the normal kernel and using snapper for back-ups. Linux has almost infinite choices for your system and for the graphical interface it also has a lot of choice.
 
 I'd want you to figure out whatever GUI suits you. That's why I'll lay a few out for you, and you can take a look at them. You can install each GUI with `pacman -S <package>` and remove it if you don't like it with `pacman -Rns <package>`. So let's go on to the list:
 
@@ -397,14 +412,14 @@ I'd want you to figure out whatever GUI suits you. That's why I'll lay a few out
 - [Wayland](https://wiki.archlinux.org/title/Wayland) is a library for compositors, which allows you to mix-and-match different compositors, bars and other applications. You can fully design your own desktop experience[^4].
 - [Xorg](https://wiki.archlinux.org/title/Xorg) is the older brother of Wayland, it has been around for about 20 years and wayland is aiming to replace it. A lot of people[^4] are still using xorg and it is still a valid choice.
 
-All these options have ups and downs, but if you've never used Linux (and to be fair, why are you installing Arch right away?) a desktop environment is the quickest way to get set up. Window managers and compositors are awesome, and I've recently switched to [Hyprland](https://hyprland.org/). Window managers do take a lot more time to configure nicely and will take more tweaking. I've recently made my [dotfiles](https://codeberg.org/legoraft/dots) a bit more coherent, so you can check out those and the [docs](https://codeberg.org/legoraft/dots/src/branch/main/docs) if you're interested in learning a bit more about that.
+All these options have positive and negative sides to them, so you should take a look at a few and try them out. Everyone has their own preferences, and I’m currently using Hyprland, which I’ve set up exactly as I’d like it to be (check out my [dots](https://codeberg.org/legoraft/dots)). A desktop environment can be a good choice if you don’t want to fiddle around with your computer, but window managers and compositors are really fun if you’re interested. Pick your poison, you’ll probably change it out at some point.
 
 I hope your Arch install is running great and you've found the GUI of your liking. The great thing of something like Linux is the ability to switch around those things whenever, so it's always awesome. If you'd want to read a bit more on Linux and Linux distros I'd recommend, check out [this](/posts/switching-to-linux) post.
 
 [^1]: Btrfs is a filesystem that allows you to take snapshots of your filesystem very easily. This makes rolling back previous versions easy and makes the Arch experience a bit more stable.
 
-[^2]: The kernel contains software that's essential for your system. You can choose between a few different once, as they're listed [here](https://wiki.archlinux.org/title/Kernel#Officially_supported_kernels).
+[^2]: The kernel contains software that's essential for your system. You can choose between a few different ones, they're listed [here](https://wiki.archlinux.org/title/Kernel#Officially_supported_kernels). For a desktop pc you’ll probably want to choose either the `zen` kernel or the normal `linux` kernel.
 
-[^3]: The UUID can be found by running `blkid /dev/<root-partition>`. The UUID should be a string of letters and numbers. You can copy the output of this command by running `blkid /dev/<root-partition> >> /mnt/boot/loader/entries/arch.conf`, but you need to remove all other text from the UUID.
+[^3]: The UUID can be found by running `blkid /dev/<root-partition>`. The UUID should be a string of letters and numbers. You can copy the output of this command by running `blkid /dev/<root-partition> >> /boot/loader/entries/arch.conf`, but you need to remove all other text from the UUID.
 
-[^4]: Check out [unixporn](https://reddit.com/r/unixporn) (it's SFW, I swear). People customize the heck out of their computers and some stuff looks great. It does require a lot of configuration and tweaking (you'll be mostly working on your desktop experience in stead of doing work).
+[^4]: Check out [unixporn](https://reddit.com/r/unixporn) (it's SFW, I swear). People customize the heck out of their computers and some stuff looks great. It does require a lot of configuration and tweaking (you'll be mostly working on your desktop experience instead of doing work).
