@@ -2,9 +2,9 @@
 layout: default
 ---
 
-# Posts
+## Posts
 
-<ul>
+<ul class="post-list">
     {% for post in site.posts %}
         <li>
             <p><a href="{{ post.url }}">{{ post.title }}</a></p>
