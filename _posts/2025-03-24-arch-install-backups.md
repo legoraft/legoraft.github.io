@@ -2,7 +2,7 @@
 layout: post
 title: "Installing Arch Linux with backups"
 author: legoraft
-updated: 2025-03-24 10:19:00
+updated: 2025-06-17 12:55:00
 ---
 
 Arch Linux is often referred to as one of the ‘hardest' Linux distributions to learn, but that isn't really true. If you can follow instructions thoroughly and are willing to learn things about your Linux system, Arch can be quite simple. This blog post will try to help with that, where I run you through a basic Arch Linux installation and teach you some of the ins and outs of the Linux system. We'll be setting up our system with `btrfs` and `systemd-boot` (I'll explain what those are a bit later). We'll also be enabling backups and exploring some GUI stuff.
@@ -327,7 +327,7 @@ After restarting the system, check if your system still has internet by running 
 ping -c 5 archlinux.org
 ```
 
-If you’re getting any errors and set up your system over Wi-Fi, you should run `nmtui` to connect to your Wi-Fi again. After doing this, it will connect automatically on startup. You can now check f your system is fully up-to-date (it should be) by running the following:
+If you’re getting any errors and set up your system over Wi-Fi, you should run `nmtui` to connect to your Wi-Fi again. After doing this, it will connect automatically on startup. You can now check if your system is fully up-to-date (it should be) by running the following:
 
 ```
 sudo pacman -Syu
