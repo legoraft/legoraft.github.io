@@ -343,7 +343,7 @@ sudo pacman -S snapper snap-pac
 
 Snapper uses a dedicated subvolume called `.snapshots` by default, but I want to use the `@snapshots` subvolume we've created earlier. Because of this, installing snapper is a bit more work.
 
-Start off by unmounting `@snapshots` and deleting the directory it's mounted to.
+Start off by unmounting `@snapshots` and deleting the directory it's mounted to. If `umount @snapshots` doesn't work, it could be that it's `umount /@snapshots`.
 
 ```
 sudo umount @snapshots
@@ -360,7 +360,7 @@ sudo snapper -c <config> create-config /
 You can name your config anything, I'm just using `root` to reference the root partition. After this, a new `.snapshots` subvolume is created. We'll need to delete this and re-add our own subvolume. If the first command doesn't work, you'll probably need to use `/.snapshots` instead of `.snapshots`.
 
 ```
-sudo btrfs subvolume delete .snapshots
+sudo btrfs subvolume delete /.snapshots
 
 sudo mkdir /.snapshots
 ```
