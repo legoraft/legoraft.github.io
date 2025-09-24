@@ -252,7 +252,7 @@ We need to add our own boot entries and configure the loader. First, edit `loade
 nano /boot/loader/loader.conf
 ```
 
-You'll want to add the following lines (you can remove the `#` from the timeout line and set it to 5):
+You'll want to add the following lines[^5] (you can remove the `#` from the timeout line and set it to 5):
 
 ```
 default    arch-*
@@ -343,10 +343,10 @@ sudo pacman -S snapper snap-pac
 
 Snapper uses a dedicated subvolume called `.snapshots` by default, but I want to use the `@snapshots` subvolume we've created earlier. Because of this, installing snapper is a bit more work.
 
-Start off by unmounting `@snapshots` and deleting the directory it's mounted to. If `umount @snapshots` doesn't work, it could be that it's `umount /@snapshots`.
+Start off by unmounting `@snapshots` and deleting the directory it's mounted to. We'll unmount the volume with the `umount` command and remove the directory its mounted to.
 
 ```
-sudo umount @snapshots
+sudo umount /.snapshots
 
 sudo rm -r /.snapshots
 ```
@@ -357,7 +357,7 @@ After removing the directory, we can configure snapper.
 sudo snapper -c <config> create-config /
 ```
 
-You can name your config anything, I'm just using `root` to reference the root partition. After this, a new `.snapshots` subvolume is created. We'll need to delete this and re-add our own subvolume. If the first command doesn't work, you'll probably need to use `/.snapshots` instead of `.snapshots`.
+You can name your config anything, I'm just using `root` to reference the root partition. After this, a new `.snapshots` subvolume is created. We'll need to delete this and re-add our own subvolume.
 
 ```
 sudo btrfs subvolume delete /.snapshots
@@ -423,3 +423,5 @@ I hope your Arch install is running great and you've found the GUI of your likin
 [^3]: The UUID can be found by running `blkid /dev/<root-partition>`. The UUID should be a string of letters and numbers. You can copy the output of this command by running `blkid /dev/<root-partition> >> /boot/loader/entries/arch.conf`, but you need to remove all other text from the UUID.
 
 [^4]: Check out [unixporn](https://reddit.com/r/unixporn) (it's SFW, I swear). People customize the heck out of their computers and some stuff looks great. It does require a lot of configuration and tweaking (you'll be mostly working on your desktop experience instead of doing work).
+
+[^5]: If the systemd-boot looks a bit blurry or low-resolution, you can add the `console-mode` variable to your config. Set this value to `max` by adding the following line: `console-mode max`.
