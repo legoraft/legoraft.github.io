@@ -2,7 +2,7 @@
 layout: post
 title: "Installing Arch Linux with backups"
 author: legoraft
-updated: 2025-06-17 12:55:00
+updated: 2025-09-24 14:12:00
 ---
 
 Arch Linux is often referred to as one of the ‘hardest' Linux distributions to learn, but that isn't really true. If you can follow instructions thoroughly and are willing to learn things about your Linux system, Arch can be quite simple. This blog post will try to help with that, where I run you through a basic Arch Linux installation and teach you some of the ins and outs of the Linux system. We'll be setting up our system with `btrfs` and `systemd-boot` (I'll explain what those are a bit later). We'll also be enabling backups and exploring some GUI stuff.
