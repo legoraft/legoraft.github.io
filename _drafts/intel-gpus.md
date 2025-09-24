@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Intel GPUs are great! But..."
+title: "Intel GPUs are great"
 author: legoraft
 updated: 2025-09-24 14:02:00
 ---
