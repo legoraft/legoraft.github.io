@@ -17,4 +17,4 @@ Another day later and my new PC arrived. After building it (the [Fractal Design 
 
 ## Being an early adopter
 
-I love the setup I have using my dotfiles and
+I love the setup I have using my dotfiles and I am currently using Hyprland as my wayland compositor. This does come with some issues, mainly pertaining to being an early adopter. Wayland isn't fully matured yet, but most problems with wayland have been solved nowadays (see [wearewaylandnow](https://wearewaylandnow.com)). Most of the early adopter issues are related to using Intel Arc graphics.
