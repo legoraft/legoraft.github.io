@@ -29,4 +29,12 @@ However great my new computer is, having an Intel GPU means being an early adopt
 
 After doing some research, I found out that by setting `GSK_RENDERER=gl` before launching mission center it would be fixed. These issues also appear in other libadwaita applications and have the same fix. These issues seemed to be related to mesa or the intel xe driver. I found a few issues like [mesa's #13759](https://gitlab.freedesktop.org/mesa/mesa/-/issues/13759) and [nixpkgs' #353990](https://github.com/NixOS/nixpkgs/issues/353990). The root cause for these issues hasn't really been found yet, but I'm hopeful that they will be fixed eventually.
 
+## 
+
+It sucks a lot if your computer or anything else you care about breaks down. With a computer though, you often don't know what the exact cause is. If you're lucky, you have a homelab you can borrow parts from, but you're often left to your own devices. Debugging things is hard and if you don't have the tools, you could get stuck. I would always recommend getting a CPU with integrated graphics in your computer to make these thing easier (I did with the new one). I'm also very happy that I was able to buy a new computer (definitely in this economy), but being on the bleeding edge of tech is always a hit or miss. I think that having an Intel GPU definitely isn't the bleeding edge anymore, as they have been released for about 2 years now, but this doesn't mean that all issues have been ironed out or it is mainstream (thinking of you, wayland[^2]).
+
+All in all, tech is a wonderful hobby and if you ever need to clean out computer, you can just push it off until said computer dies. More seriously, if you can improve your workflow in some way or another, please try to do it. I've refitted some of my workflow with my new software setup and I've been quite a bit more productive on my computer. I'm currently also trying out a new blogging workflow, which (hopefully) will improve the post volume over here, so I look forward to explaining that one in a future post once it has been ironed out.
+
 [^1]: Ray tracing, a math-based way to calculate lighting. Turning this on instantly crashed my game.
+
+[^2]: [Wayland](https://wayland.freedesktop.org/) is aiming to be an [xorg](https://www.x.org/wiki/) replacement, which has been getting more traction recently, even though it has existed for about 16 years.
