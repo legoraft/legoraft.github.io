@@ -19,6 +19,8 @@ Another day later and my new PC arrived. After building it (the [Fractal Design 
 
 I love the setup I have using my dotfiles and I am currently using Hyprland as my wayland compositor. This does come with some issues, mainly pertaining to being an early adopter. Wayland isn't fully matured yet, but most problems with wayland have been solved nowadays (see [wearewaylandnow](https://wearewaylandnow.com)). Most of the early adopter issues are related to using Intel Arc graphics. I didn't have any issues until I downloaded a libadwaita application. I love [mission center](https://missioncenter.io/) as a graphical system status viewer, and wanted to use it to monitor GPU usage during gaming. After starting mission center, I slowly saw some weird graphical errors appearing and after a little while the full application would glitch out and hang.
 
+![Image of graphical artifacts in mission center](../assets/images/hypnos-v2/mission-center-artifacts.png)
+
 After doing some research, I found out that by setting `GSK_RENDERER=gl` before launching mission center it would be fixed. These issues also appear in other libadwaita applications and have the same fix. These issues seemed to be related to mesa or the intel xe driver. I found a few issues like [mesa's #13759](https://gitlab.freedesktop.org/mesa/mesa/-/issues/13759) and [nixpkgs' #353990](https://github.com/NixOS/nixpkgs/issues/353990). The root cause for these issues hasn't really been found yet, but I'm hopeful that they will be fixed eventually.
 
 
