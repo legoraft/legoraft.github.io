@@ -15,12 +15,18 @@ Well, this caused me to debate just swapping out the old AM4 CPU, which would co
 
 Another day later and my new PC arrived. After building it (the [Fractal Design Ridge](https://www.fractal-design.com/products/cases/ridge/) looks awesome) I also decided to change out my old Pop_OS! install for a fresh Arch Linux install with my own [dotfiles](https://github.com/legoraft/dots). This improved my workflow greatly, as I have my workspaces and tiled windows, which I've fallen in love with recently.
 
+## A fresh install
+
+I love the setup I have using my dotfiles and I am currently using Hyprland as my wayland compositor. I've tuned my dotfiles on an old laptop already, but they are now used in a true 'production' environment and they work great! Previously, I was using Pop_OS!, which was a mess due to me trying a lot of things out and never cleaning up. My computer breaking finally pushed me to fix some stuff on my pc and I now have a great PC and some great software to go with it!
+
+I've already tried some gaming on it, as I'm currently doing my first full playthrough of GTA V. Because this game still is quite demanding (especially on the enhanced edition) I was happy to see that I could bump up to the highest graphics settings (no RT[^1]) and have a stable framerate (60+). I also booted up Minecraft, which just ran great, which it also did on my old computer.
+
 ## Being an early adopter
 
-I love the setup I have using my dotfiles and I am currently using Hyprland as my wayland compositor. This does come with some issues, mainly pertaining to being an early adopter. Wayland isn't fully matured yet, but most problems with wayland have been solved nowadays (see [wearewaylandnow](https://wearewaylandnow.com)). Most of the early adopter issues are related to using Intel Arc graphics. I didn't have any issues until I downloaded a libadwaita application. I love [mission center](https://missioncenter.io/) as a graphical system status viewer, and wanted to use it to monitor GPU usage during gaming. After starting mission center, I slowly saw some weird graphical errors appearing and after a little while the full application would glitch out and hang.
+However great my new computer is, having an Intel GPU means being an early adopter. This does come with some issues, mainly pertaining to being an early adopter. Wayland isn't fully matured yet, but most problems with wayland have been solved nowadays (see [wearewaylandnow](https://wearewaylandnow.com)). Most of the early adopter issues are related to using Intel Arc graphics. I didn't have any issues until I downloaded a libadwaita application. I love [mission center](https://missioncenter.io/) as a graphical system status viewer, and wanted to use it to monitor GPU usage during gaming. After starting mission center, I slowly saw some weird graphical errors appearing and after a little while the full application would glitch out and hang.
 
 ![Image of graphical artifacts in mission center](../assets/images/hypnos-v2/mission-center-artifacts.png)
 
 After doing some research, I found out that by setting `GSK_RENDERER=gl` before launching mission center it would be fixed. These issues also appear in other libadwaita applications and have the same fix. These issues seemed to be related to mesa or the intel xe driver. I found a few issues like [mesa's #13759](https://gitlab.freedesktop.org/mesa/mesa/-/issues/13759) and [nixpkgs' #353990](https://github.com/NixOS/nixpkgs/issues/353990). The root cause for these issues hasn't really been found yet, but I'm hopeful that they will be fixed eventually.
 
-
+[^1]: Ray tracing, a math-based way to calculate lighting. Turning this on instantly crashed my game.
