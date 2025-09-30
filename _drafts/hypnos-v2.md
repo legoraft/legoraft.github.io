@@ -17,7 +17,7 @@ Another day later and my new PC arrived. After building it (the [Fractal Design 
 
 ## A fresh install
 
-I love the setup I have using my dotfiles and I am currently using Hyprland as my wayland compositor. I've tuned my dotfiles on an old laptop already, but they are now used in a true 'production' environment and they work great! Previously, I was using Pop_OS!, which was a mess due to me trying a lot of things out and never cleaning up. My computer breaking finally pushed me to fix some stuff on my pc and I now have a great PC and some great software to go with it!
+I love the setup I have using my dotfiles and I am currently using Hyprland as my wayland compositor. I've tuned my dotfiles on an old laptop already, but they are now used in a true 'production' environment and they work great! Previously, I was using Pop_OS!, which was a mess due to me trying out a lot of things and never cleaning up. My computer breaking finally pushed me to fix some stuff on my pc and I now have a great PC and some great software to go with it!
 
 I've already tried some gaming on it, as I'm currently doing my first full playthrough of GTA V. Because this game still is quite demanding (especially on the enhanced edition) I was happy to see that I could bump up to the highest graphics settings (no RT[^1]) and have a stable framerate (60+). I also booted up Minecraft, which just ran great, which it also did on my old computer.
 
