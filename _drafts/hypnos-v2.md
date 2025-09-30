@@ -27,7 +27,7 @@ However great my new computer is, having an Intel GPU means being an early adopt
 
 ![Image of graphical artifacts in mission center](../assets/images/hypnos-v2/mission-center-artifacts.png)
 
-After doing some research, I found out that by setting `GSK_RENDERER=gl` before launching mission center it would be fixed. These issues also appear in other libadwaita applications and have the same fix. These issues seemed to be related to mesa or the intel xe driver. I found a few issues like [mesa's #13759](https://gitlab.freedesktop.org/mesa/mesa/-/issues/13759) and [nixpkgs' #353990](https://github.com/NixOS/nixpkgs/issues/353990). The root cause for these issues hasn't really been found yet, but I'm hopeful that they will be fixed eventually. This is just a fact of using hardware and software that isn't widely used yet.
+After doing some research, I found out that by setting `GSK_RENDERER=gl` before launching mission center it would be fixed. These issues also appear in other libadwaita applications and have the same fix. This seemed to be related to mesa or the intel xe driver. I found a few bug reports like [mesa's #13759](https://gitlab.freedesktop.org/mesa/mesa/-/issues/13759) and [nixpkgs' #353990](https://github.com/NixOS/nixpkgs/issues/353990). The root cause for these problems hasn't really been found yet, but I'm hopeful that they will be fixed eventually. This is just a fact of using hardware and software that isn't widely used yet.
 
 ## Conclusion
 
