@@ -13,7 +13,7 @@ The next day, I installed the new GPU, booted the computer up and... Still nothi
 
 Well, this caused me to debate just swapping out the old AM4 CPU, which would cost me about €50, and have me up and running. But I was already planning on building a new computer, which would be a small form factor computer and just fit the aestethic of my room a bit better. This would set me back about €750 extra on top of the €270 I already paid for my new GPU. Because the AM4 platform is practically dead and I wanted to have the new AM5 platform in my new computer, I decided to bite the bullet and go for it.
 
-Another day later and my new computer arrived. After building it (the [Fractal Design Ridge](https://www.fractal-design.com/products/cases/ridge/) looks awesome) I also decided to change out my old Pop_OS! install for a fresh Arch Linux install with my own [dotfiles](https://github.com/legoraft/dots). This improved my workflow greatly, as I have my workspaces and tiled windows, which I've fallen in love with recently.
+Another day later and my new computer arrived. After building it (the [Fractal Design Ridge](https://www.fractal-design.com/products/cases/ridge/) looks awesome) I also decided to change out my old Pop_OS! install for a fresh Arch Linux install with my own [dotfiles](https://github.com/legoraft/dots). Mostly because my old install was a total mess and I was due for a cleanup a long time ago. I also wanted to change from pop's default stacking layout to a tiling, workspace based workflow, which I've used on my macbook for the past year.
 
 ## A fresh install
 
