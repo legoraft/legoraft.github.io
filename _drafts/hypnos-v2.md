@@ -2,7 +2,7 @@
 layout: post
 title: "A forced computer upgrade"
 author: legoraft
-updated: 2025-09-30 14:02:00
+updated: 2025-10-02 18:05:00
 ---
 
 My computer suddenly broke down a few weeks ago. Even though it was six years old, this was quite unexpected and kind of annoying. The main problem was that my computer would turn on, the RGB on the motherboard would glow, but I wouldn't get any display output. Simple problem, the GPU died. I ordered a new GPU (an Intel Arc B580 I was eyeing already) and waited till the next day for it to arrive.
