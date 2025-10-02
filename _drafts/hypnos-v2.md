@@ -39,4 +39,4 @@ All in all, tech is a wonderful hobby and if you ever need to clean out your com
 
 [^1]: Ray tracing, a math-based way to calculate lighting. Turning this on instantly crashed my game.
 
-[^2]: [Wayland](https://wayland.freedesktop.org/) is aiming to be an [xorg](https://www.x.org/wiki/) replacement, which has been getting more traction recently, even though it has existed for about 16 years.
+[^2]: [Wayland](https://wayland.freedesktop.org/) is aiming to be an [xorg](https://www.x.org/wiki/) replacement, which has been getting more mainstream recently, this did take a long time (it has been in development for about 16 years).
