@@ -31,12 +31,20 @@ header, footer {
         }
     }
     
+    p {
+        color: var(--secondary)
+    }
+    
     i {
         color: var(--secondary);
         font-size: 0.9rem;
         
         &:hover {
             color: var(--primary);
+        }
+        
+        &.nf-md-rss {
+            font-size: 0.75rem;
         }
     }
     
