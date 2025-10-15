@@ -31,12 +31,12 @@ header, footer {
         }
     }
     
-    svg {
-        fill: var(--secondary);
-        width: 1rem;
+    i {
+        color: var(--secondary);
+        font-size: 0.9rem;
         
         &:hover {
-            fill: var(--primary);
+            color: var(--primary);
         }
     }
     
