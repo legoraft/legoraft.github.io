@@ -23,7 +23,7 @@ After my small KiCad experiment, I was wondering if I could make a PCB for this.
 
 PCB manufacturing is a little bit difficult, as the big players, JLCPCB and PCBWay are in China, charging crazy shipping feeds. After some browsing around, I found [Aisler](https://aisler.net/)[^3], a European company, and I could just upload my KiCad file. The grand total for the PCBs (with free shipping), was just €20, €5 less than I'd pay for shipping at one of the other companies.
 
-[^1]: Check out the source code on [codeberg](https://codeberg.org/legoraft/esphome)
+[^1]: Check out the source code on [codeberg](https://codeberg.org/legoraft/esphome/cabinet-cooler)
 
 [^2]: The one that got me through the whole process was by [Build Electronic Circuits](https://www.build-electronic-circuits.com/kicad-tutorial/), awesome, easy-to-follow tutorial and good explanations.
 
