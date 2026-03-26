@@ -7,7 +7,7 @@ updated = 2026-03-25
 tags = [ "tech", "electronics", "smart home", "diy", "homelab" ]
 +++
 
-I recently made my first PCB. It was for a small, stupid project which definitely didn't need custom hardware, but it was _fun_. I wanted to make my electronics a bit cleaner after wiring everything on a breadboard. I found out about [KiCad](https://www.kicad.org/) and tried making a PCB.
+I recently made my first PCB. It was for a small, stupid project which definitely didn't need custom hardware, but it was _fun_. I wanted to make my electronics a bit cleaner after wiring everything on a breadboard. I found out about [KiCad](https://www.kicad.org/) and tried making a PCB. I learned a lot of things along the way, including soldering and wanted to share them.
 
 ## Creating a cabinet cooler
 
