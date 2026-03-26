@@ -25,6 +25,6 @@ PCB manufacturing is a little bit difficult, as the big players, JLCPCB and PCBW
 
 [^1]: Check out the source code on [codeberg](https://codeberg.org/legoraft/esphome/cabinet-cooler)
 
-[^2]: The one that got me through the whole process was by [Build Electronic Circuits](https://www.build-electronic-circuits.com/kicad-tutorial/), awesome, easy-to-follow tutorial and good explanations.
+[^2]: The one that got me through the whole process was by [Build Electronic Circuits](https://www.build-electronic-circuits.com/kicad-tutorial/), awesome, easy-to-follow tutorial with good explanations.
 
 [^3]: If you'd like to order your own PCB and support me, use my referral [code](!todo)
