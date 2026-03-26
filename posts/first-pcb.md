@@ -11,11 +11,15 @@ I recently made my first PCB. It was for a small, stupid project which definitel
 
 ## Creating a cabinet cooler
 
-It started of with me wanting to migrate my homelab to an Alex cabinet, because I'm moving to a smaller place. Currently, my homelab is in a random cabinet that doesn't have a back, so it has a lot of airflow. The problem is just that it's to big. I wanted to add some airflow to the Alex, by adding a few fans on the back and two temp sensors to manage the two 'zones' (above and below the shelf). Because I'm using home assistant, my first thought was to integrate this little gizmo with [ESPHome](https://esphome.io).
+It started of with me needing to migrate my homelab to an Ikea Alex cabinet, because I'm moving to a smaller place. Currently, my homelab is in a random cabinet that doesn't have a back, so it has a lot of airflow, but it's to big. I wanted to add some airflow to the Alex, by adding a few fans on the back and two temp sensors to manage the two 'zones' (above and below the shelf). Because I'm using home assistant, my first thought was to integrate this little gizmo with [ESPHome](https://esphome.io).
 
-After ordering a ton of electronics stuff (when yous start a hobby, do it right), I got into wiring a single [NF-F12 5V PWM](https://www.noctua.at/en/products/nf-f12-5v-pwm) fan from Noctua. They have some awesome documentation and I got it working way sooner than I expected. After getting the fan working, I added a DHT11 temperature sensor and hooked everything up to my ESP32, wrote some code and everything was working and visible in home assistant! I made some further iterations on the code to automatically adjust the fan curve and everything was working good[^1].
+<!-- Maybe add some info on Joshua Boniface's fan hub and the tutorial online on DHT11 and fan control -->
 
-Because I finished my experiment way to soon, I wanted to make a more permanent version. I took a look at a perfboard, a soldering iron and some wires and wasn't sure if it was the best route, mostly due to it being slightly janky. Because I wasn't sure what size perfboard I needed, I wanted to draw the electrical connections and plan everything that way. I read somewhere that KiCad was the way to go, so I tried that. Because I didn't get the whole program, I layed down a lot of through-holes, roughly estimating the amount I needed and wrote it down.
+After ordering a ton of electronics stuff (when you start a hobby, do it right), I got into wiring a single [NF-F12 5V PWM](https://www.noctua.at/en/products/nf-f12-5v-pwm) fan from Noctua. They have some awesome documentation and I got it working way sooner than I expected. After getting the fan working, I added a DHT11 temperature sensor and hooked everything up to my ESP32, wrote some code and everything was working and visible in home assistant! I made some further iterations on the code to automatically adjust the fan curve and everything was working good[^1].
+
+After finishing my experiment way sooner than expected, I wanted to make a more permanent version. I took a look at a perfboard, a soldering iron and some wires and wasn't sure if it was the best route. The main problem me not knowing anything about soldering, but setting up a perfboard correctly and being unsure about it holding up weren't helping. I decided to put it off and just drew the circuit diagram on a piece of paper for now.
+
+<!-- Maybe add the original circuit diagram and the final version next to each other? -->
 
 ## PCB Design
 
