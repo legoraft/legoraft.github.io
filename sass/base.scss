@@ -2,7 +2,7 @@
 @import "colors.scss";
 
 body {
-    margin: auto;
+    margin: 1rem auto;
     max-width: 90ch;
     font-family: Arial, Helvetica, sans-serif;
     background-color: $background;
@@ -10,4 +10,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    
+    padding: 1rem;
+    border: 2px solid $foreground;
+}
+
+h1.section-title {
+    font-weight: normal;
+    font-size: 1rem;
+    margin: -1.75rem 0;
+    padding: 0 .5rem;
+    width: max-content;
+    background-color: inherit;
 }
