@@ -3,9 +3,11 @@
 {% block content %}
 <h1 class="section-title">list</h1>
 
-<section>
+<h1 class="title" id="home">{{ section.title }}</h1>
+
+<section class="list">    
     {% for year, posts in section.pages | group_by(attribute="year") %}
-    <h2>{{ year }}</h2>
+    <h1 class="section-title">{{ year }}</h1>
     
     <ul>
       {% for post in posts %}

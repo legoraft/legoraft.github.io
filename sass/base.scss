@@ -53,6 +53,19 @@ section {
         flex-direction: column;
     }
     
+    &.list {
+        padding: 1rem;
+        margin: .5rem .5rem;
+        border: 2px solid $foreground;
+        
+        flex-direction: column;
+        
+        li a {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
     ul {
         list-style: none;
         margin-top: 2.25rem;
