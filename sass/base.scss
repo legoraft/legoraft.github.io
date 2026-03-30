@@ -25,7 +25,16 @@ h1.section-title {
     background-color: $background;
 }
 
-section, article, .wrapper, footer {
+h1.title {
+    text-align: center;
+    margin: 1rem 0;
+    
+    &#home {
+        margin-top: 2.75rem;
+    }
+}
+
+section, article, footer {
     margin-top: 2.25rem;
 }
 
