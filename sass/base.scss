@@ -58,3 +58,14 @@ a {
         background-color: $accent;
     }
 }
+
+footer {
+    padding: 1rem;
+    margin: .5rem .5rem;
+    border: 2px solid $foreground;
+    
+    section ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
