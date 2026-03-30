@@ -1,0 +1,13 @@
+@import "reset.scss";
+@import "colors.scss";
+
+body {
+    margin: auto;
+    max-width: 90ch;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $background;
+    color: $foreground;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
