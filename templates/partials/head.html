@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+    {%- if current_path == "/" -%}
+        {{ config.title }} - Home
+    {%- elif section -%}
+        {{ section.title }} - {{ config.title }}
+    {%- elif page -%}
+        {{ page.title }} - {{ config.title }}
+    {%- else -%}
+        {{ config.title }}
+    {%- endif -%}
+</title>
+
+<link rel="stylesheet" href="{{ get_url(path="base.css", trailing_slash=false) }}">
