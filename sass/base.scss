@@ -48,11 +48,11 @@ section {
 }
 
 a {
-    color: blue;
+    color: $accent;
     text-decoration: none;
     
     &:hover {
         color: $background;
-        background-color: blue;
+        background-color: $accent;
     }
 }
