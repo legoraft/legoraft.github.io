@@ -1,0 +1,28 @@
+@import "colors.scss";
+
+article {
+    margin: .5rem .5rem;
+    
+    p {
+        margin: 1rem 0;
+    }
+    
+    h1, h2, h3 {
+        margin: 1rem 0;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .footnote-definition {
+        display: flex;
+        margin: .75rem 0;
+        gap: .5rem;
+        color: $light;
+        
+        p {
+            margin: 0;
+        }
+    }
+}

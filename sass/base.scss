@@ -1,5 +1,6 @@
 @import "reset.scss";
 @import "colors.scss";
+@import "article.scss";
 
 body {
     margin: 1rem auto;
@@ -68,4 +69,10 @@ footer {
         display: flex;
         justify-content: space-evenly;
     }
+}
+
+a.back {
+    margin: 0 .5rem;
+    margin-bottom: 1rem;
+    max-width: max-content;
 }
