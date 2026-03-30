@@ -3,7 +3,20 @@
 {% block content %}
 <h1 class="section-title">page</h1>
 
-<section>
+<section class="main">
+    <ul class="posts">
+        {% set posts = get_section(path="posts/_index.md") %}
+        {% for post in posts.pages %}
+        <li>
+            <a href="{{ post.permalink | safe }}">
+                <p>{{ post.title }}</p>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
     
+    <ul class="pages">
+        
+    </ul>
 </section>
 {% endblock content %}
