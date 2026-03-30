@@ -1,0 +1,14 @@
+base_url = "https://legoraft.com"
+
+title = "Legoraft"
+description = "My personal site, where I write about whatever and have fun."
+
+default_language = "en"
+
+compile_sass = true
+
+author = "Legoraft"
+
+taxonomies = [
+    { name = "tags", feed=false }
+]
