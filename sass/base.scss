@@ -24,15 +24,17 @@ h1.section-title {
     background-color: $background;
 }
 
-section, article {
+section, article, .wrapper, footer {
     margin-top: 2.25rem;
 }
 
-section {
+.wrapper {
     display: flex;
     justify-content: space-between;
-    
-    .posts, .pages {
+}
+
+section {
+    &.posts, &.pages {
         padding: 1rem;
         margin: .5rem .5rem;
         border: 2px solid $foreground;
