@@ -11,9 +11,7 @@
             {% set posts = get_section(path="posts/_index.md") %}
             {% for post in posts.pages %}
             <li>
-                <a href="{{ post.permalink | safe }}">
-                    <p>{{ post.title }}</p>
-                </a>
+                <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
             </li>
             {% endfor %}
         </ul>
@@ -24,14 +22,10 @@
         
         <ul>
             <li>
-                <a href="/about">
-                    <p>About</p>
-                </a>
+                <a href="/about">About</a>
             </li>
             <li>
-                <a href="/history">
-                    <p>Site history</p>
-                </a>
+                <a href="/history">Site history</a>
             </li>
         </ul>
     </section>

@@ -46,3 +46,13 @@ section {
         margin-top: 2.25rem;
     }
 }
+
+a {
+    color: blue;
+    text-decoration: none;
+    
+    &:hover {
+        color: $background;
+        background-color: blue;
+    }
+}
