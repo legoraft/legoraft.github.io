@@ -4,19 +4,36 @@
 <h1 class="section-title">page</h1>
 
 <section class="main">
-    <ul class="posts">
-        {% set posts = get_section(path="posts/_index.md") %}
-        {% for post in posts.pages %}
-        <li>
-            <a href="{{ post.permalink | safe }}">
-                <p>{{ post.title }}</p>
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-    
-    <ul class="pages">
+    <section class="posts">
+        <h1 class="section-title">posts</h1>
         
-    </ul>
+        <ul>
+            {% set posts = get_section(path="posts/_index.md") %}
+            {% for post in posts.pages %}
+            <li>
+                <a href="{{ post.permalink | safe }}">
+                    <p>{{ post.title }}</p>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    
+    <section class="pages">
+        <h1 class="section-title">pages</h1>
+        
+        <ul>
+            <li>
+                <a href="/about">
+                    <p>About</p>
+                </a>
+            </li>
+            <li>
+                <a href="/history">
+                    <p>Site history</p>
+                </a>
+            </li>
+        </ul>
+    </section>
 </section>
 {% endblock content %}

@@ -21,9 +21,28 @@ h1.section-title {
     margin: -1.75rem 0;
     padding: 0 .5rem;
     width: max-content;
-    background-color: inherit;
+    background-color: $background;
 }
 
 section, article {
     margin-top: 2.25rem;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    
+    .posts, .pages {
+        padding: 1rem;
+        margin: .5rem .5rem;
+        border: 2px solid $foreground;
+        width: 50%;
+        
+        flex-direction: column;
+    }
+    
+    ul {
+        list-style: none;
+        margin-top: 2.25rem;
+    }
 }
