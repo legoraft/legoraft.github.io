@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="section-title">{{ taxonomy.name | lower }}</h1>
+
+<h1 class="title" id="home">{{ taxonomy.name | capitalize }}</h1>
+
+<section class="list">
+    <h1 class="section-title">list</h1>
+    
+    <ul>
+      {% for term in terms %}
+      <li class="tags">
+          <a href="{{ term.permalink | safe }}">
+              <p># {{ term.name }}</p>
+              <p class="count">{{ term.page_count }} page{{ term.page_count | pluralize }}</p>
+          </a>
+      </li>
+      {% endfor %}
+    </ul>
+</section>
+{% endblock content %}

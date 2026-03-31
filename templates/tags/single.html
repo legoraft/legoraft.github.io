@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="section-title">tag</h1>
+
+<h1 class="title" id="home">{{ term.name | capitalize }}</h1>
+
+<section class="list">
+    <h1 class="section-title">pages</h1>
+    
+    <ul>
+      {% for page in term.pages %}
+      <li class="tags">
+          <a href="{{ page.permalink | safe }}">
+              <p>{{ page.title }}</p>
+              <p>{{ page.date }}</p>
+          </a>
+      </li>
+      {% endfor %}
+    </ul>
+</section>
+{% endblock content %}
