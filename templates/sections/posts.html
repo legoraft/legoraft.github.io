@@ -5,8 +5,8 @@
 
 <h1 class="title" id="home">{{ section.title }}</h1>
 
-<section class="list">    
-    {% for year, posts in section.pages | group_by(attribute="year") %}
+{% for year, posts in section.pages | group_by(attribute="year") %}
+<section class="list">      
     <h1 class="section-title">{{ year }}</h1>
     
     <ul>
@@ -19,9 +19,8 @@
       </li>
       {% endfor %}
     </ul>
-    {% endfor %}
-    
 </section>
+{% endfor %}
 
 <a href="/" onclick="history.back(); return false" class="back">&lt; back</a>
 {% endblock content %}
