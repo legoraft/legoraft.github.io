@@ -13,3 +13,6 @@ feed_filenames = [ "rss.xml" ]
 taxonomies = [
     { name = "tags", feed=false }
 ]
+
+[markdown]
+external_links_target_blank = true
