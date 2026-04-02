@@ -11,7 +11,7 @@
         
         <ul>
             {% set posts = get_section(path="posts/_index.md") %}
-            {% for post in posts.pages | slice(end=5) %}
+            {% for post in posts.pages | slice(end=4) %}
             <li>
                 <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
             </li>
