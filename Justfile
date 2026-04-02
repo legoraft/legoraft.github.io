@@ -2,4 +2,5 @@ save:
     git push
 
 publish:
-    git push && git push codeberg
+    git push
+    git push codeberg
