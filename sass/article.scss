@@ -21,6 +21,11 @@ article {
         gap: .5rem;
         color: $light;
         
+        &:first-of-type {
+            padding-top: .5rem;
+            border-top: 2px solid $light;
+        }
+        
         p {
             margin: 0;
         }
