@@ -49,16 +49,12 @@ section {
         margin: .5rem .5rem;
         border: 2px solid $foreground;
         width: 50%;
-        
-        flex-direction: column;
     }
     
     &.list, &.gallery {
         padding: 1rem;
         margin: .5rem .5rem;
         border: 2px solid $foreground;
-        
-        flex-direction: column;
         
         li a {
             display: flex;
@@ -97,4 +93,27 @@ a.back {
     margin: 0 .5rem;
     margin-bottom: 1rem;
     max-width: max-content;
+}
+
+@media only screen and (max-width: 940px) {
+    body {
+        margin: 1rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    
+    section {
+        &.posts, &.pages {
+            width: auto;
+        }
+    }
+    
+    footer section ul {
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
 }
