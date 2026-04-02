@@ -1,11 +1,12 @@
 @import "reset.scss";
 @import "colors.scss";
 @import "article.scss";
+@import "fonts.scss";
 
 body {
     margin: 1rem auto;
     max-width: 90ch;
-    font-family: Courier, monospace;
+    font-family: "Source Code Pro", Courier, monospace;
     background-color: $background;
     color: $foreground;
     display: flex;
