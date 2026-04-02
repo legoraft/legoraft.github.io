@@ -15,6 +15,14 @@ article {
         text-align: center;
     }
     
+    h2.date {
+        font-weight: normal;
+        text-align: center;
+        margin-top: -1rem;
+        font-size: 1rem;
+        color: $light;
+    }
+    
     .footnote-definition {
         display: flex;
         margin: .75rem 0;

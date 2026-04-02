@@ -5,6 +5,11 @@
 
 <article>
     <h1 class="title">{{ page.title }}</h1>
+    {% if page.updated != page.date %}
+        <h2 class="date">{{ page.date | date(format="%b %d, %Y") }} - ↻ {{ page.updated | date(format="%b %d") }}</h2>
+    {% else %}
+        <h2 class="date">{{ page.date | date(format="%b %d, %Y") }} - ↻ {{ page.updated | date(format="%b %d") }}</h2>
+    {% endif %}
     
     {{ page.content | safe }}
 </article>
