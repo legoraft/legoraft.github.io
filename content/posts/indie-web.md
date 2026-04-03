@@ -1,7 +1,6 @@
 +++
 title = "Alive internet"
 date = 2026-03-29
-updated = 2026-03-30
 
 [taxonomies]
 tags = [ "tech", "self-hosting", "web", "writing" ]
