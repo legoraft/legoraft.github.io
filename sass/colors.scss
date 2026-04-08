@@ -13,6 +13,14 @@
     @include theme(light.$colors);
 }
 
+:root[css-theme="dark"] {
+    @include theme(dark.$colors);
+}
+
+:root[css-theme="light"] {
+    @include theme(light.$colors);
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         @include theme(dark.$colors);
