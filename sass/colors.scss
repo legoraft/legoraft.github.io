@@ -3,8 +3,9 @@
 
 @mixin theme($theme-colors) {
     --background: #{map-get($theme-colors, background)};
-    --light: #{map-get($theme-colors, light)};
+    --surface: #{map-get($theme-colors, surface)};
     --foreground: #{map-get($theme-colors, foreground)};
+    --light: #{map-get($theme-colors, light)};
     --accent: #{map-get($theme-colors, accent)};
 }
 

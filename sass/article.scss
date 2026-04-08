@@ -23,6 +23,12 @@ article {
         color: var(--light);
     }
     
+    code {
+        background-color: var(--surface);
+        padding: 0 .25rem;
+        border-radius: .25rem;
+    }
+    
     .footnote-definition {
         display: flex;
         margin: .75rem 0;
