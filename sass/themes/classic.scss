@@ -1,0 +1,19 @@
+// Default themes
+
+// Default light theme
+$light: (
+    background: hsl(240, 2%, 95%),
+    surface: hsl(240, 15%, 90%),
+    foreground: hsl(240, 2%, 15%),
+    light: hsl(240, 2%, 40%),
+    accent: hsl(240, 80%, 60%)
+);
+
+// Default dark theme
+$dark: (
+    background: hsl(240, 2%, 10%),
+    surface: hsl(240, 5%, 20%),
+    foreground: hsl(240, 2%, 90%),
+    light: hsl(240, 2%, 50%),
+    accent: hsl(240, 80%, 70%)
+);

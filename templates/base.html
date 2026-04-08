@@ -5,8 +5,12 @@
     </head>
 
     <body>        
-        {% block content %} {% endblock content %}
+        {% include "partials/header.html" %}
         
-        {% include "partials/footer.html" %}
+        <section class="main">
+            {% block content %} {% endblock content %}
+            
+            {% include "partials/footer.html" %}
+        </section>
     </body>
 </html>

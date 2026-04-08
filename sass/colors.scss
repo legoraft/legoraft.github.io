@@ -1,5 +1,5 @@
-@use "themes/light";
-@use "themes/dark";
+@use "themes/classic";
+@use "themes/nord";
 
 @mixin theme($theme-colors) {
     --background: #{map-get($theme-colors, background)};
@@ -10,19 +10,27 @@
 }
 
 :root {
-    @include theme(light.$colors);
+    @include theme(classic.$light);
 }
 
-:root[css-theme="dark"] {
-    @include theme(dark.$colors);
+:root[css-theme="classic"] {
+    @include theme(classic.$light);
 }
 
-:root[css-theme="light"] {
-    @include theme(light.$colors);
+:root[css-theme="nord"] {
+    @include theme(nord.$light);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        @include theme(dark.$colors);
+        @include theme(classic.$dark);
+    }
+    
+    :root[css-theme="classic"] {
+        @include theme(classic.$dark);
+    }
+    
+    :root[css-theme="nord"] {
+        @include theme(nord.$dark);
     }
 }

@@ -12,6 +12,11 @@ body {
     color: var(--foreground);
     display: flex;
     flex-direction: column;
+}
+
+section.main {
+    display: flex;
+    flex-direction: column;
     
     padding: 1rem;
     border: 2px solid var(--foreground);
