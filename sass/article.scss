@@ -20,18 +20,18 @@ article {
         text-align: center;
         margin-top: -1rem;
         font-size: 1rem;
-        color: $light;
+        color: var(--light);
     }
     
     .footnote-definition {
         display: flex;
         margin: .75rem 0;
         gap: .5rem;
-        color: $light;
+        color: var(--light);
         
         &:first-of-type {
             padding-top: .5rem;
-            border-top: 2px solid $light;
+            border-top: 2px solid var(--light);
         }
         
         p {

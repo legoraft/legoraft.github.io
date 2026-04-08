@@ -1,5 +1,6 @@
+@use "colors.scss";
+
 @import "reset.scss";
-@import "colors.scss";
 @import "article.scss";
 @import "fonts.scss";
 
@@ -7,13 +8,13 @@ body {
     margin: 1rem auto;
     max-width: 90ch;
     font-family: "Source Code Pro", Courier, monospace;
-    background-color: $background;
-    color: $foreground;
+    background-color: var(--background);
+    color: var(--foreground);
     display: flex;
     flex-direction: column;
     
     padding: 1rem;
-    border: 2px solid $foreground;
+    border: 2px solid var(--foreground);
 }
 
 h1.section-title {
@@ -22,7 +23,7 @@ h1.section-title {
     margin: -1.75rem 0;
     padding: 0 .5rem;
     width: max-content;
-    background-color: $background;
+    background-color: var(--background);
 }
 
 h1.title {
@@ -47,14 +48,14 @@ section {
     &.posts, &.pages {
         padding: 1rem;
         margin: .5rem .5rem;
-        border: 2px solid $foreground;
+        border: 2px solid var(--foreground);
         width: 50%;
     }
     
     &.list, &.gallery {
         padding: 1rem;
         margin: .5rem .5rem;
-        border: 2px solid $foreground;
+        border: 2px solid var(--foreground);
         
         li a {
             display: flex;
@@ -69,19 +70,19 @@ section {
 }
 
 a {
-    color: $accent;
+    color: var(--accent);
     text-decoration: none;
     
     &:hover {
-        color: $background;
-        background-color: $accent;
+        color: var(--background);
+        background-color: var(--accent);
     }
 }
 
 footer {
     padding: 1rem;
     margin: .5rem .5rem;
-    border: 2px solid $foreground;
+    border: 2px solid var(--foreground);
     
     section ul {
         display: flex;

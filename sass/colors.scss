@@ -1,4 +1,19 @@
-$background: hsl(85, 2%, 95%);
-$light: hsl(85, 2%, 40%);
-$foreground: hsl(85, 2%, 15%);
-$accent: hsl(240, 80%, 60%)
+@use "themes/light";
+@use "themes/dark";
+
+@mixin theme($theme-colors) {
+    --background: #{map-get($theme-colors, background)};
+    --light: #{map-get($theme-colors, light)};
+    --foreground: #{map-get($theme-colors, foreground)};
+    --accent: #{map-get($theme-colors, accent)};
+}
+
+:root {
+    @include theme($light);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include theme($dark);
+    }
+}
