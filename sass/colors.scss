@@ -9,11 +9,11 @@
 }
 
 :root {
-    @include theme($light);
+    @include theme(light.$colors);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        @include theme($dark);
+        @include theme(dark.$colors);
     }
 }
