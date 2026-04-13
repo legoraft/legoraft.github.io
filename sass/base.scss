@@ -78,9 +78,10 @@ a {
     color: var(--accent);
     text-decoration: none;
     
-    &:hover {
+    &:hover, &:focus {
         color: var(--background);
         background-color: var(--accent);
+        outline: none;
     }
 }
 
@@ -111,9 +112,10 @@ header {
             justify-content: center;
             gap: .15rem;
             
-            &:hover {
+            &:hover, &:focus {
                 background-color: var(--foreground);
                 color: var(--background);
+                outline: none;
                 
                 span {
                     &#accent, &#foreground, &#surface { background-color: var(--background); }
@@ -137,7 +139,9 @@ header {
             }
         }
         
-        &:hover {
+        &:hover, &:focus, &:focus-within {
+            outline: none;
+            
             .content {
                 display: flex;
                 gap: inherit;
