@@ -33,7 +33,7 @@ I still wasn't fully sold on the PCB thing, though. Remember me not being sure a
 
 So, onto manufacturing I went! PCB manufacturing is a little bit difficult in Europe, as the big players, JLCPCB and PCBWay are in China, charging crazy shipping fees. After some browsing around, I found [Aisler](https://aisler.net/)[^3], a European company, and I could just upload my KiCad file. The grand total for the PCBs (with free shipping), was just €20, €5 less than I'd pay for shipping at one of the other companies. My PCBs were quite a lot more expensive, but the total price was less, so I went with them.
 
-After ordering the PCBs, I realized that my initial order mostly had breadboard stuff, so I was still missing the soldering stuff. So I ordered some extra components (including some PWM headers) and a soldering iron. The PCB manufacturing was planned to take almost 3 weeks, so I wasn't in a hurry to assemble things. Aisler surprised me though, they finished the PCB in 2 days and sent it a day later.
+After ordering the PCBs, I realized that my initial order mostly had breadboard stuff, so I was still missing the soldering stuff. So I ordered some extra components (including some PWM headers) and a soldering iron. The PCB manufacturing was planned to take almost 3 weeks, so I wasn't in a hurry to assemble things. Aisler surprised me though, they finished the PCB in 2 days and sent it a day later. Due to snailmail being what it is, it took about a week until the boards were in the mailbox, but the delivery was very fast.
 
 [^1]: Check out the source code on [codeberg](https://codeberg.org/legoraft/esphome/cabinet-cooler)
 
