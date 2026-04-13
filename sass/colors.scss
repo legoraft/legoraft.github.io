@@ -1,5 +1,7 @@
 @use "themes/classic";
 @use "themes/nord";
+@use "themes/kanagawa";
+@use "themes/gruvbox";
 
 @mixin theme($theme-colors) {
     --background: #{map-get($theme-colors, background)};
@@ -21,6 +23,14 @@
     @include theme(nord.$light);
 }
 
+:root[css-theme="kanagawa"] {
+    @include theme(kanagawa.$light);
+}
+
+:root[css-theme="gruvbox"] {
+    @include theme(gruvbox.$light);
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         @include theme(classic.$dark);
@@ -32,5 +42,13 @@
     
     :root[css-theme="nord"] {
         @include theme(nord.$dark);
+    }
+    
+    :root[css-theme="kanagawa"] {
+        @include theme(kanagawa.$dark);
+    }
+    
+    :root[css-theme="gruvbox"] {
+        @include theme(gruvbox.$dark);
     }
 }
