@@ -1,19 +1,15 @@
-const switcher = document.getElementById("theme-switcher");
 const root = document.documentElement;
+const buttons = document.querySelectorAll(".theme-button")
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   root.setAttribute("css-theme", savedTheme);
 }
 
-if (switcher) {
-  if (savedTheme) {
-    switcher.value = savedTheme;
-  }
-  
-  switcher.addEventListener("change", (e) => {
-    const theme = e.target.value;
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const theme = button.getAttribute("theme");
     root.setAttribute("css-theme", theme);
     localStorage.setItem("theme", theme);
   });
-}
+});
