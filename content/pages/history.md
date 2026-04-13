@@ -21,4 +21,4 @@ I love customizing my stuff, just so it feels more like _mine_. It was just a ma
 
 Inspired by all the crazy indie web stuff I ran into, I wanted to create a theme that also felt like it reflected me. I took a look at a lot of different sites and saw that there really is any good way to do this. After a while I decided to go for a TUI-like theme, because I love the terminal and thought it'd be a good reflection of me as a person.
 
-I also made the decision to 
+I also made the decision to allow people to choose their own theme. I love customization and have added some of my favorite themes to this site.
