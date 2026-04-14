@@ -1,5 +1,6 @@
 +++
 title = "My first PCB"
+draft = true
 date = 2026-03-25
 updated = 2026-03-25
 
