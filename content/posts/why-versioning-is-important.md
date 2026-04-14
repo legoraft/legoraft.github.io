@@ -1,11 +1,13 @@
 +++
 title = "Why versioning is important"
 date = 2024-09-29
-updated = 2024-09-29
+updated = 2026-04-14
 
 [taxonomies]
 tags = [ "development", "games", "minecraft" ]
 +++
+
+> This is a post I wrote in 2024, 2 years ago. Check out the update on this topic in my new [post](@/posts/change-updates-change-versions.md)
 
 Recently, Mojang has [changed](https://www.minecraft.net/en-us/article/the-future-of-minecrafts-development) how they release Minecraft. This was already apparent, but it's official now. This is mostly because they want to give players new features more often. It also changes their update cycle a lot, because they changed how they version the game.
 
