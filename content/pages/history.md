@@ -9,7 +9,7 @@ I love to redesign my personal website. This site has been through countless ite
 
 ## First blog
 
-I started blogging a long time ago, when I learned about Jekyll and markdown. A lot of those posts have been lost in the ether and I just used stock themes at that time. This wasn't a particularly interesting part of my site history, I just used whatever I ran into and used jekyll for everything, because deploying with github pages was so easy.
+I started blogging a long time ago, when I learned about Jekyll and markdown. A lot of those posts have been lost in the ether and I just used stock themes at that time. This wasn't a particularly interesting part of my site history, I just used whatever I ran into and used Jekyll for everything, because deploying with github pages was so easy.
 
 ## First theme
 
@@ -21,4 +21,6 @@ I love customizing my stuff, just so it feels more like _mine_. It was just a ma
 
 Inspired by all the crazy indie web stuff I ran into, I wanted to create a theme that also felt like it reflected me. I took a look at a lot of different sites and saw that there really is any good way to do this. After a while I decided to go for a TUI-like theme, because I love the terminal and thought it'd be a good reflection of me as a person.
 
-I also made the decision to allow people to choose their own theme. I love customization and have added some of my favorite themes to this site.
+I also made the decision to allow people to choose their own theme. I love customization and have added some of my favorite themes to this site. This was also the first time I stopped using Jekyll and started using [zola](https://getzola.org). This generator isn't that different, but it was fast and prevented all the ruby crap by just being a single binary.
+
+![The next iteration of my personal site, with a TUI-like theme](/images/pages/history/tui-site.png)
