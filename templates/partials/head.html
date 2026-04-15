@@ -4,6 +4,26 @@
 <script type="module" src="{{ get_url(path="js/theme-switcher.js") }}" defer></script>
 <script type="module" src="{{ get_url(path="js/mode-switcher.js") }}" defer></script>
 
+<link rel="apple-touch-icon" sizes="57x57" href="{{ get_url(path="favicon/apple-icon-57x57.png") }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ get_url(path="favicon/apple-icon-60x60.png") }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ get_url(path="favicon/apple-icon-72x72.png") }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ get_url(path="favicon/apple-icon-76x76.png") }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ get_url(path="favicon/apple-icon-114x114.png") }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ get_url(path="favicon/apple-icon-120x120.png") }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ get_url(path="favicon/apple-icon-144x144.png") }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ get_url(path="favicon/apple-icon-152x152.png") }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path="favicon/apple-icon-180x180.png") }}">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ get_url(path="favicon/android-icon-192x192.png") }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path="favicon/favicon-32x32.png") }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ get_url(path="favicon/favicon-96x96.png") }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="favicon/favicon-16x16.png") }}">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#f2f2f3" media="(prefers-color-scheme: light)">
+<meta name="msapplication-TileColor" content="#19191a" media="(prefers-color-scheme: dark)">
+<meta name="msapplication-TileImage" content="{{ get_url(path="favicon/ms-icon-144x144.png") }}">
+<meta name="theme-color" content="#f2f2f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#19191a" media="(prefers-color-scheme: dark)">
+
 {% block rss %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
 {% endblock %}
