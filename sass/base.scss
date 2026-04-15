@@ -78,7 +78,7 @@ a {
     color: var(--accent);
     text-decoration: none;
     
-    &:hover, &:focus {
+    &:hover, &:focus-visible {
         color: var(--background);
         background-color: var(--accent);
         outline: none;
@@ -112,7 +112,7 @@ header {
             justify-content: center;
             gap: .15rem;
             
-            &:hover, &:focus {
+            &:hover, &:focus-visible {
                 background-color: var(--foreground);
                 color: var(--background);
                 outline: none;
@@ -139,7 +139,7 @@ header {
             }
         }
         
-        &:hover, &:focus, &:focus-within {
+        &:hover, &:focus-visible, &:focus-within {
             outline: none;
             
             .content {
