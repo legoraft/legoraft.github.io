@@ -107,6 +107,17 @@ header {
     button#mode-button {
         border: none;
         background-color: transparent;
+        
+        span {
+            width: 1rem;
+            height: 1rem;
+            color: var(--foreground);
+            
+            svg {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
     }
     
     #theme {
