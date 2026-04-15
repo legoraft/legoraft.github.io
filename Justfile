@@ -4,3 +4,4 @@ save:
 publish:
     git push
     git push github
+    git push codeberg
