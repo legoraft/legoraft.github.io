@@ -29,21 +29,31 @@
 {% block rss %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
 {% endblock %}
-    
-<title>
-    {%- if current_path is defined -%}
+
+{% block title %}
+{%- if current_path is defined -%}
         {%- if current_path == "/" -%}
-            {{ config.title }} - Home
+            <title>{{ config.title }} - Home</title>
+            <meta property="og:title" content="{{ config.title }} - Home">
+            <meta property="og:description" content="{{ config.description }}">
         {%- elif section -%}
-            {{ section.title }} - {{ config.title }}
+            <title>{{ section.title }} - {{ config.title }}</title>
+            <meta property="og:title" content="{{ section.title }} - {{ config.title }}">
+            <meta property="og:description" content="{{ section.description }}">
         {%- elif page -%}
-            {{ page.title }} - {{ config.title }}
+            <title>{{ page.title }} - {{ config.title }}</title>
+            <meta property="og:title" content="{{ page.title }} - {{ config.title }}">
+            <meta property="og:description" content="{{ page.description }}">
         {%- else -%}
-            {{ config.title }}
+            <title>{{ config.title }}</title>
+            <meta property="og:title" content="{{ config.title }}">
+            <meta property="og:description" content="{{ config.description }}">
         {%- endif -%}
-    {%- else -%}
-        {{ config.title }}
-    {%- endif -%}
-</title>
+{%- else -%}
+    <title>{{ config.title }}</title>
+    <meta property="og:title" content="{{ config.title }}">
+    <meta property="og:description" content="{{ config.description }}">
+{%- endif -%}
+{% endblock %}
 
 <link rel="stylesheet" href="{{ get_url(path="base.css", trailing_slash=false) }}">
