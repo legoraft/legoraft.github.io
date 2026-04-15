@@ -8,13 +8,13 @@ updated = 2026-04-14
 tags = [ "development", "games", "minecraft" ]
 +++
 
-Mojang has changed their versioning system. This is something I didn't expect, but it is a great step forward. In a post about two years ago, I [wrote](@/posts/why-versioning-is-important.md) that Minecraft's versioning was getting worse with the new game drop system, making it so players and developers don't know what the latest major and minor versions are. Recently, Mojang announced in a [post](https://minecraft.net/articles/minecraft-new-version-numbering-system) on their site that they will change how Minecraft will be versioned. This is a great step towards better communication between players, developers and modders.
+Mojang has changed their versioning system. This is something I didn't expect, but it is a great step forward. In a post about two years ago, I [wrote](@/posts/why-versioning-is-important.md) that Minecraft's versioning was getting worse with the new game drop system, making it so players and developers don't know what the latest major and minor versions are. Recently, Mojang announced in a [post](https://www.minecraft.net/article/minecraft-new-version-numbering-system) on their site that they will change how Minecraft will be versioned. This is a great step towards better communication between players, developers and modders.
 
 ## The old
 
 If you haven't read my previous post, here is a quick recap of the old situation. For years minecraft was versioned with a `1.x.x` version. The first `x` showed the current major version, while the second was reserved for bug fixes. An example of this is `1.16.3`, where `1.16` shows that it is the nether update and the `3` shows that the [item duplication bug](https://bugs.mojang.com/browse/MC/issues/MC-198678) present in `1.16.2` has been fixed.
 
-This system was great for years, until Mojang started releasing game drops. These are smaller updates that get released three times a year. With this new system, they just started incrementing the bug fix number. This caused the `1.21` version to go all the way to `1.21.11`, the highest version number until [now](https://minecraft.wiki/w/Java_Edition_version_history). With this, players and modders couldn't easily see the difference between a bug fix and a major version, as both incremented the same number.
+This system was great for years, until Mojang started releasing game drops. These are smaller updates that get released three times a year. With this new system, they just started incrementing the bug fix number. This caused the `1.21` version to go all the way to `1.21.11`, the highest version number until [now](https://minecraft.wiki/w/Java_Edition_version_history#1.21). With this, players and modders couldn't easily see the difference between a bug fix and a major version, as both incremented the same number.
 
 ## The new
 
