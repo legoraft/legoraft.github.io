@@ -96,9 +96,18 @@ footer {
     }
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 header {
     display: flex;
     justify-content: space-between;
+    
+    button#mode-button {
+        border: none;
+        background-color: transparent;
+    }
     
     #theme {
         display: flex;
