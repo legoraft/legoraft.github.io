@@ -31,24 +31,44 @@
     @include theme(gruvbox.$light);
 }
 
+:root[mode="dark"] {
+    @include theme(classic.$dark);
+}
+
+:root[css-theme="classic"][mode="dark"] {
+    @include theme(classic.$dark);
+}
+
+:root[css-theme="nord"][mode="dark"] {
+    @include theme(nord.$dark);
+}
+
+:root[css-theme="kanagawa"][mode="dark"] {
+    @include theme(kanagawa.$dark);
+}
+
+:root[css-theme="gruvbox"][mode="dark"] {
+    @include theme(gruvbox.$dark);
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         @include theme(classic.$dark);
     }
     
-    :root[css-theme="classic"] {
+    :root[css-theme="classic"]:not([mode]) {
         @include theme(classic.$dark);
     }
     
-    :root[css-theme="nord"] {
+    :root[css-theme="nord"]:not([mode]) {
         @include theme(nord.$dark);
     }
     
-    :root[css-theme="kanagawa"] {
+    :root[css-theme="kanagawa"]:not([mode]) {
         @include theme(kanagawa.$dark);
     }
     
-    :root[css-theme="gruvbox"] {
+    :root[css-theme="gruvbox"]:not([mode]) {
         @include theme(gruvbox.$dark);
     }
 }
