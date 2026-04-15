@@ -1,5 +1,6 @@
 +++
 title = "Why versioning is important"
+description = "Recently, Mojang has changed how they release Minecraft. This was already apparent, but it's official now. This is mostly because they want to give players new features more often. It also changes their update cycle a lot, because they changed how they version the game."
 date = 2024-09-29
 updated = 2026-04-14
 

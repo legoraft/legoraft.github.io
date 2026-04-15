@@ -1,5 +1,6 @@
 +++
 title = "Change your updates, change your versioning"
+description = "Recently, Mojang announced in a post on their site that they will change how Minecraft will be versioned. This is a great step towards better communication between players, developers and modders."
 date = 2026-04-14
 updated = 2026-04-14
 
