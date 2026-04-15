@@ -4,6 +4,7 @@
 <script type="module" src="{{ get_url(path="js/theme-switcher.js") }}" defer></script>
 <script type="module" src="{{ get_url(path="js/mode-switcher.js") }}" defer></script>
 
+{% block seo %}
 <link rel="apple-touch-icon" sizes="57x57" href="{{ get_url(path="favicon/apple-icon-57x57.png") }}">
 <link rel="apple-touch-icon" sizes="60x60" href="{{ get_url(path="favicon/apple-icon-60x60.png") }}">
 <link rel="apple-touch-icon" sizes="72x72" href="{{ get_url(path="favicon/apple-icon-72x72.png") }}">
@@ -23,6 +24,7 @@
 <meta name="msapplication-TileImage" content="{{ get_url(path="favicon/ms-icon-144x144.png") }}">
 <meta name="theme-color" content="#f2f2f3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#19191a" media="(prefers-color-scheme: dark)">
+{% endblock %}
 
 {% block rss %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
