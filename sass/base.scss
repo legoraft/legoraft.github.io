@@ -97,9 +97,13 @@ footer {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    
     #theme {
         display: flex;
         gap: .5rem;
+        flex-direction: row-reverse;
         
         button {
             padding: .25rem .5rem;
@@ -150,6 +154,7 @@ header {
         
         .content {
             display: none;
+            flex-direction: inherit;
         }
     }
 }
