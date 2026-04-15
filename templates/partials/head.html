@@ -1,7 +1,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
-<script type="text/javascript" src="{{ get_url(path="js/theme-switcher.js") }}" defer></script>
+<script type="module" src="{{ get_url(path="js/theme-switcher.js") }}" defer></script>
+<script type="module" src="{{ get_url(path="js/mode-switcher.js") }}" defer></script>
 
 {% block rss %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
