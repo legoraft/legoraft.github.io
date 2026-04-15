@@ -36,23 +36,36 @@
             <title>{{ config.title }} - Home</title>
             <meta property="og:title" content="{{ config.title }} - Home">
             <meta property="og:description" content="{{ config.description }}">
+            <meta property="og:url" content="{{ config.base_url }}">
+            <meta property="og:type" content="website">
         {%- elif section -%}
             <title>{{ section.title }} - {{ config.title }}</title>
             <meta property="og:title" content="{{ section.title }} - {{ config.title }}">
             <meta property="og:description" content="{{ section.description }}">
+            <meta property="og:url" content="{{ section.permalink }}">
+            <meta property="og:type" content="article">
         {%- elif page -%}
             <title>{{ page.title }} - {{ config.title }}</title>
             <meta property="og:title" content="{{ page.title }} - {{ config.title }}">
             <meta property="og:description" content="{{ page.description }}">
+            <meta property="og:url" content="{{ page.permalink }}">
+            <meta property="og:type" content="article">
+
+            <meta name="twitter:title" content="{{ page.title }}">
+            <meta name="twitter:description" content="{{ page.description }}">
         {%- else -%}
             <title>{{ config.title }}</title>
             <meta property="og:title" content="{{ config.title }}">
             <meta property="og:description" content="{{ config.description }}">
+            <meta property="og:url" content="{{ config.base_url }}">
+            <meta property="og:type" content="article">
         {%- endif -%}
 {%- else -%}
     <title>{{ config.title }}</title>
     <meta property="og:title" content="{{ config.title }}">
     <meta property="og:description" content="{{ config.description }}">
+    <meta property="og:url" content="{{ config.base_url }}">
+    <meta property="og:type" content="article">
 {%- endif -%}
 {% endblock %}
 
