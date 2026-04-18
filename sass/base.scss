@@ -207,3 +207,8 @@ a.back {
         gap: .5rem;
     }
 }
+
+::selection, ::-moz-selection {
+    color: var(--background);
+    background-color: var(--accent);
+}
