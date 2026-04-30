@@ -21,7 +21,7 @@ branch=${branch:-$generated_branch}
 git checkout -b "$branch"
 mkdir -p $(dirname "$file")
 
-cat << "EOF" > $file
+cat << EOF > $file
 +++
 title = "$title"
 description = ""
