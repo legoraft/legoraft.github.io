@@ -8,7 +8,7 @@ updated = 2026-04-30
 tags = [ "tech", "web", "browsers", "application" ]
 +++
 
-I've been using the [Zen browser](https://zen-browser.app/) for almost a year, but I've moved back to firefox in the last week. This is mostly due to zen breaking a basic browser feature I can't live without.
+I've been using Firefox for a long time, but when I heard about the [Zen browser](https://zen-browser.app/), I had to try it. It was a great experience, until a bug appeared that broke my daily workflow, making me go back to firefox.
 
 ## Moving to Zen
 
