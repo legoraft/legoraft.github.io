@@ -1,6 +1,6 @@
 +++
 title = "Moving back to Firefox"
-description = ""
+description = "I've used Firefox a lot, but when I heard about the Zen browser, I had to try it. It was a great experience, until a bug appeared that broke my daily workflow, making me go back to Firefox."
 date = 2026-04-30
 updated = 2026-04-30
 
