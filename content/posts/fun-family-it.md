@@ -30,8 +30,9 @@ On self-hosting services, don't see that as an SLA. You're probably giving them 
 
 ## Have fun
 
+My favorite approach to being the family helpdesk is what Luke has said on the [WAN show](!todo). Being the family help desk should be appreciated, because you stay in touch with those family members that call with their problems. Of course, if you're the IT person for your family, you will be called more often for often benign reasons, but you still can help them, often with a simple google search, which makes them happy. Even though they probably could've looked it up themselves, you're a lot faster at it. Think of the plumber that can fix a leak within minutes. You could've done it, but the plumber is way faster.
 
-My favorite approach to being the family helpdesk is what Luke has said on the [WAN show](!todo). He said that being the family IT guy should be appreciated, because you stay in touch with those family members that call with their problems. Of course, if you're the IT person for your family, you will be called more often for often benign reasons, but you still can help them, often with a simple google search, which makes them happy. You also stay in touch with a lot of people way more, which is a fun way to look at it.
+The most important part truly is to just have fun. Your grandma probably is very happy that she has a new laptop and your family could be very grateful for watching all your legally acquired media on your jellyfin server. Just be happy that you can be of value for a lot of people and that you're appreciated. And remember, you're a human too. If you don't have time or the person calling asks for to much, you can just say no, how difficult it can be.
 
 [^1]: A loud portion of the internet at least.
 [^2]: A Service Level Agreement, a contract that says that you should supply certain services to the other party.
