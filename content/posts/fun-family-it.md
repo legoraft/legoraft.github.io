@@ -30,9 +30,6 @@ On self-hosting services, don't see that as an SLA. You're probably giving them 
 
 ## Have fun
 
-The biggest part of having this responsibility of being "the IT guy" is to mostly empower people to do their own computing, you shouldn't push your own values and importance on them. For example, I run a lot of Linux machines besides my macbook. This doesn't mean that I would advise everyone in my family to run Arch and buy a dedicated gaming desktop. This just isn't an approach for people who want to get work done and use their computers as a _tool_, not a _project_. You can also give them a little hint towards 'better' principles, for example a robust password manager or a more private, debloated operating system. I don't really like windows machines for example, if someone needs a new laptop I'd suggest grabbing a macbook, especially with the new [neo](!todo), if they are more familiar with windows, then let's take a look at what would be the best.
-
-Besides just helping people in stead of pushing your own stuff on people who just _don't_ understand, you should also explain them as best as possible what you _can_ and what you _can't_ do. For example, self-hosting doesn't directly mean that you have an SLA for [8 nines](!todo), so you should explain that it'll probably look more like 9 eights.
 
 My favorite approach to being the family helpdesk is what Luke has said on the [WAN show](!todo). He said that being the family IT guy should be appreciated, because you stay in touch with those family members that call with their problems. Of course, if you're the IT person for your family, you will be called more often for often benign reasons, but you still can help them, often with a simple google search, which makes them happy. You also stay in touch with a lot of people way more, which is a fun way to look at it.
 
