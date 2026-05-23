@@ -2,6 +2,9 @@ const wander = {
   // Other Wander consoles that visitors can reach from my console.
   consoles: [
     "https://susam.net/wander/",
+    "https://huffstler.github.io/wander",
+    "https://juleskourelakos.com/wander/",
+    "https://karlquinsland.com/wander/"
   ],
 
   // My favourite websites and pages I recommend to the Wander community.
