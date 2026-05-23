@@ -16,8 +16,10 @@ const wander = {
   // Websites and consoles to ignore.  My console will never fetch
   // consoles or web pages whose URLs match the following patterns.
   ignore: [
-    // Fake examples, please replace with actual URLs.
+    // Consoles
     "https://joshing.you/wander",
+
+    // Sites
     "dbushell.com",
     "blog.yossarian.net",
     "drkhsh.at",
