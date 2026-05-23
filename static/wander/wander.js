@@ -9,7 +9,8 @@ const wander = {
     "https://matduggan.com",
     "https://overreacted.io",
     "https://sandboxspirit.com",
-    "https://blog.vaxry.net"
+    "https://blog.vaxry.net",
+    "https://hunio.org/",
   ],
 
   // Websites and consoles to ignore.  My console will never fetch
@@ -17,5 +18,9 @@ const wander = {
   ignore: [
     // Fake examples, please replace with actual URLs.
     "https://joshing.you/wander",
+    "dbushell.com",
+    "blog.yossarian.net",
+    "drkhsh.at",
+    "honest-broker.com",
   ],
 }
