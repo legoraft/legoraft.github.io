@@ -37,4 +37,22 @@
         </ul>
     </section>
 </div>
+
+<section class="general">
+    <h1 class="section-title">books</h1>
+
+    <div class="bookshelf">
+        {% set library = get_section(path="books/_index.md") %}
+        {% set books = library.pages | sort(attribute="authors.0")  %}
+        {% for book in books %}
+        <a href="{{ book.permalink | safe }}" class="book" style="background-color: var(--{{ book.extra.color }}); width: 2rem;">
+            <h1>{{ book.title }}</h1>
+        </a>
+        {% endfor %}
+
+        <a href="/books" class="book" style="background-color: var(--accent); width: 2rem;">
+            <h1>More...</h1>
+        </a>
+    </div>
+</section>
 {% endblock content %}

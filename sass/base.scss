@@ -57,6 +57,16 @@ section {
         border: 2px solid var(--foreground);
         width: 50%;
     }
+
+    &.general {
+        padding: 1rem;
+        margin: .5rem .5rem;
+        border: 2px solid var(--foreground);
+
+        div {
+            margin-top: 2.25rem;
+        }
+    }
     
     &.list, &.gallery {
         padding: 1rem;
