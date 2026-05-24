@@ -6,7 +6,16 @@ $light: (
     surface: #d8dee9,
     foreground: #2e3440,
     light: #4c566a,
-    accent: #5e81ac
+    accent: #5e81ac,
+
+    black: #3b4252,
+    red: #bf616a,
+    green: #a3be8c,
+    yellow: #ebcb8b,
+    blue: #88c0d0,
+    purple: #b48ead,
+    aqua: #8fbcbb,
+    gray: #434c5e
 );
 
 // Nord dark
@@ -15,5 +24,14 @@ $dark: (
     surface: #3b4252,
     foreground: #eceff4,
     light: #d8dee9,
-    accent: #88c0d0
+    accent: #88c0d0,
+
+    black: #434c5e,
+    red: #bf616a,
+    green: #a3be8c,
+    yellow: #ebcb8b,
+    blue: #88c0d0,
+    purple: #b48ead,
+    aqua: #8fbcbb,
+    gray: #4c566a
 );
