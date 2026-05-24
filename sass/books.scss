@@ -15,8 +15,7 @@ a.book {
 
     h1 {
         font-size: 1rem;
-        color: #999;
-        mix-blend-mode: difference;
+        color: var(--foreground);
     }
 
     &:hover, &:focus {        
