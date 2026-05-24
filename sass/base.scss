@@ -2,6 +2,7 @@
 
 @import "reset.scss";
 @import "article.scss";
+@import "books.scss";
 @import "fonts.scss";
 
 body {
@@ -56,6 +57,16 @@ section {
         border: 2px solid var(--foreground);
         width: 50%;
     }
+
+    &.general {
+        padding: 1rem;
+        margin: .5rem .5rem;
+        border: 2px solid var(--foreground);
+
+        div {
+            margin-top: 2.25rem;
+        }
+    }
     
     &.list, &.gallery {
         padding: 1rem;
@@ -68,7 +79,7 @@ section {
         }
     }
     
-    ul {
+    ul.unmarked {
         list-style: none;
         margin-top: 2.25rem;
     }
@@ -82,6 +93,15 @@ a {
         color: var(--background);
         background-color: var(--accent);
         outline: none;
+    }
+
+    &:visited {
+        color: var(--purple);
+
+        &:hover {
+            background-color: var(--purple);
+            color: var(--background);
+        }
     }
 }
 

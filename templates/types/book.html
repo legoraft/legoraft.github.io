@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="section-title">book</h1>
+
+<article>
+    <h1 class="title">{{ page.title }}</h1>
+    <h2 class="date">by {{ page.authors | join(sep=", ") }}</h2>
+    
+    {{ page.content | safe }}
+</article>
+
+<a href="/" class="back">&lt; home</a>
+{% endblock content %}
