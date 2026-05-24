@@ -1,8 +1,10 @@
 +++
 title = "The Hitchhiker's Guide to the Galaxy"
 date = 2026-05-24
-authors = [ "Douglas Adams" ]
 draft = true
+
+[taxonomies]
+authors = [ "Douglas Adams" ]
 
 [extra]
 color = "blue"

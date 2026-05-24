@@ -11,7 +11,8 @@ generate_feeds = true
 feed_filenames = [ "rss.xml" ]
 
 taxonomies = [
-    { name = "tags", feed=false }
+    { name = "tags", feed = false },
+    { name = "authors", feed = false },
 ]
 
 [markdown]

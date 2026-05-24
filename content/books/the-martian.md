@@ -1,6 +1,8 @@
 +++
 title = "The Martian"
 date = 2026-01-26
+
+[taxonomies]
 authors = [ "Andy Weir" ]
 
 [extra]
