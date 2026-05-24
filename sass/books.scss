@@ -28,7 +28,7 @@ a.book {
         color: var(--foreground);
     }
 
-    &:hover, &:focus {        
+    &:hover, &:focus-visible {        
         scale: 1.1;
     }
 }

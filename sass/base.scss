@@ -98,7 +98,7 @@ a {
     &:visited {
         color: var(--purple);
 
-        &:hover {
+        &:hover, &:focus-visible {
             background-color: var(--purple);
             color: var(--background);
         }
