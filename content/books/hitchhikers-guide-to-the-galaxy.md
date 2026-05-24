@@ -4,4 +4,5 @@ authors = [ "Douglas Adams" ]
 
 [extra]
 color = "accent"
+width = 5
 +++

@@ -1,0 +1,25 @@
+@import "colors.scss";
+
+.bookshelf {
+    display: flex;
+    align-items: end;
+    margin: 1rem 0;
+}
+
+a.book {
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem .5rem;
+
+    h1 {
+        font-size: 1rem;
+        color: #999;
+        mix-blend-mode: difference;
+    }
+
+    &:hover, &:focus {        
+        scale: 1.1;
+    }
+}
