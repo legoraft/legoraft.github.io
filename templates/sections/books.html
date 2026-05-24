@@ -6,7 +6,12 @@
 <h1 class="title" id="home">{{ section.title }}</h1>
 
 <div class="bookshelf">
-    
+    {% set books = section.pages | sort(attribute="authors.0") %}
+    {% for book in books %}
+    <a href="{{ book.permalink | safe }}" class="book" style="color: var(--{{ book.extra.color }});">
+        <h1>{{ book.title }}</h1>
+    </a>
+    {% endfor %}
 </div>
 
 <a href="/" class="back">&lt; home</a>
