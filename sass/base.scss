@@ -94,6 +94,15 @@ a {
         background-color: var(--accent);
         outline: none;
     }
+
+    &:visited {
+        color: var(--purple);
+
+        &:hover {
+            background-color: var(--purple);
+            color: var(--background);
+        }
+    }
 }
 
 footer {
