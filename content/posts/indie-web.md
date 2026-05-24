@@ -1,6 +1,6 @@
 +++
 title = "Alive internet"
-description = "I've seen a lot of posts going around about dead internet theory and a lot of other depressing stuff pertaining to AI. A video about the indie web gave me a lot of hope again. The indie web is a place where people gather to relive the web as it was before social media, and it's _very_ alive."
+description = "I've seen a lot of posts going around about dead internet theory and a lot of other depressing stuff pertaining to AI. A video about the indie web gave me a lot of hope again. The indie web is a place where people gather to relive the web as it was before social media, and it's very alive."
 date = 2026-03-30
 updated = 2026-04-15
 

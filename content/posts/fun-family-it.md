@@ -1,6 +1,6 @@
 +++
 title = "Family IT should be fun"
-description = "I read a lot of posts in different technical communities, be it hacker news, reddit or github, I love lurking and reading what people think about almost everything that's tech-adjacent. Nobody on the internet seems to agree on anything, but a thing I see a lot of consensus on (especially within the self-host and linux community) is that you shouldn't be the 'family IT person'. I think that this shouldn't be such a cut-and-dry opinion, as there are a lot of different sides to this."
+description = "I see a lot of comments telling that you shouldn't be the 'family IT person'. I think that this shouldn't be such a cut-and-dry opinion, as there are a lot of different sides to this."
 date = 2026-05-24
 updated = 2026-05-24
 
