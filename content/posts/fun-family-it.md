@@ -1,8 +1,8 @@
 +++
 title = "Family IT should be fun"
 description = ""
-date = 2026-05-07
-updated = 2026-05-07
+date = 2026-05-24
+updated = 2026-05-24
 
 [taxonomies]
 tags = [ "tech", "self-hosting" ]
