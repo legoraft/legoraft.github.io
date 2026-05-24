@@ -2,7 +2,7 @@ base_url = "https://legoraft.com"
 
 title = "Legoraft"
 description = "My personal site, where I write about whatever and just have fun."
-author = "Legoraft"
+author = "Legoraft <contact@legoraft.com>"
 
 default_language = "en"
 
