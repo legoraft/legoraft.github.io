@@ -43,7 +43,7 @@
 
     <div class="bookshelf">
         {% set library = get_section(path="books/_index.md") %}
-        {% set books = library.pages | sort(attribute="authors.0")  %}
+        {% set books = library.pages | sort(attribute="date") | reverse()  %}
         {% for book in books %}
         <a href="{{ book.permalink | safe }}" class="book" style="background-color: var(--{{ book.extra.color }}); width: 2rem;">
             <h1>{{ book.title }}</h1>
