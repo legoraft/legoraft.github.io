@@ -236,6 +236,10 @@ a.back {
     max-width: max-content;
 }
 
+img.pixelated {
+    image-rendering: pixelated;
+}
+
 @media only screen and (max-width: 940px) {
     body {
         margin: 1rem 1rem;
