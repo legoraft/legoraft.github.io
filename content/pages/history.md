@@ -24,3 +24,11 @@ Inspired by all the crazy indie web stuff I ran into, I wanted to create a theme
 I also made the decision to allow people to choose their own theme. I love customization and have added some of my favorite themes to this site. This was also the first time I stopped using Jekyll and started using [zola](https://getzola.org). This generator isn't that different, but it was fast and prevented all the ruby crap by just being a single binary.
 
 ![The next iteration of my personal site, with a TUI-like theme](/images/pages/history/tui-site.png)
+
+## Indie Web
+
+After creating my own theme and having more fun with my site, I started surfing the web more and more and found out about [webrings](https://indieweb.org/webring) and [88x31 badges/buttons](https://indieweb.org/buttons). I wanted to add some to my own site, so this naturally became the next iteration of my website. I also wanted to have a place to talk about the books I've read, so a custom bookshelf was also _very_ necessary.
+
+I also created my own [button](/images/buttons/legoraft-button.gif), that others can add to their sites. I created it in Krita and learned some of its animating workflow along the way.
+
+![Head-first into the indie web, a bookshelf, webring and buttons](/images/pages/history/indie-webified.png)
