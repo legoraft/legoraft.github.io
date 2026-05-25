@@ -18,7 +18,7 @@ I've created these myself, just to have fun with animating and pixel art.
 ## Sites I like
 
 <a href="https://brennan.day" class="button">
-    <img class="pixelated" src="/images/buttons/people/brennan-day-alt.gif" alt="[Brennan.day]" />
+    <img class="pixelated" src="/images/buttons/people/brennan-day.gif" alt="[Brennan.day]" />
 </a>
 <a href="https://kuroi.com.br/" class="button">
     <img class="pixelated" src="/images/buttons/people/kuroi-os.png" alt="[kuroiOS]" />
