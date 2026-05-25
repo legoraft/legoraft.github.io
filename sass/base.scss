@@ -151,6 +151,13 @@ button:hover {
     cursor: pointer;
 }
 
+.indieweb-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
 header {
     display: flex;
     justify-content: space-between;
