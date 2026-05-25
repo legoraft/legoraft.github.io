@@ -27,7 +27,7 @@ I also made the decision to allow people to choose their own theme. I love custo
 
 ## Indie Web
 
-After creating my own theme and having more fun with my site, I started surfing the web more and more and found out about [webrings](https://indieweb.org/webring) and [88x31 badges/buttons](https://indieweb.org/buttons). I wanted to add some to my own site, so this naturally became the next iteration of my website. I also wanted to have a place to talk about the books I've read, so a custom bookshelf was also _very_ necessary.
+After creating my own theme and having more fun with my site, I started surfing the web more and more and found out about [webrings](https://indieweb.org/webring) and [88x31 badges/buttons](https://indieweb.org/buttons). I wanted to add some to my own site, so this naturally became the next iteration of my website. This also led to the creation of [/buttons](/buttons) I also wanted to have a place to talk about the books I've read, so a custom bookshelf was also _very_ necessary.
 
 I also created my own [button](/images/buttons/legoraft-button.gif), that others can add to their sites. I created it in Krita and learned some of its animating workflow along the way.
 
