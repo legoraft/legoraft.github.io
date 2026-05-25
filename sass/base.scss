@@ -105,11 +105,20 @@ a {
     }
 
     &#unlink {
-        color: var(--primary);
+        color: var(--foreground);
 
         &:hover, &:focus-visible {
             background-color: var(--foreground);
             color: var(--background);
+        }
+    }
+
+    &.h-card {
+        color: var(--foreground);
+
+        &:hover, &:visited {
+            color: var(--foreground);
+            background-color: transparent;
         }
     }
 }
