@@ -247,6 +247,12 @@ img.pixelated {
     image-rendering: pixelated;
 }
 
+p.buildinfo {
+    color: var(--surface);
+    text-align: center;
+    margin-top: 1rem;
+}
+
 @media only screen and (max-width: 940px) {
     body {
         margin: 1rem 1rem;
