@@ -19,6 +19,6 @@
             {% include "partials/footer.html" %}
         </section>
 
-        <p class="buildinfo">{{ get_env(name="GIT_COMMIT") | truncate(length=7, end="") }}</p>
+        <p class="buildinfo">{{ get_env(name="GIT_COMMIT") }} - {{ get_env(name="BUILD_TIME") }}ms</p>
     </body>
 </html>
