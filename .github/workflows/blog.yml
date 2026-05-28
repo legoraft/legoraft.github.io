@@ -21,10 +21,19 @@ jobs:
       - name: checkout
         uses: actions/checkout@v6.0.1
 
-      - name: Build Zola + upload Pages artifact
-        uses: getzola/github-pages@v1
+      - name: Install zola
+        uses: taki-e/install-action@v2
         with:
-          zola_version: v0.22.0
+          tool: zola
+
+      - name: Build site
+        run: ./scripts/build.sh
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: site
+          path: public
 
   deploy:
     runs-on: ubuntu-latest
