@@ -31,4 +31,6 @@ After creating my own theme and having more fun with my site, I started surfing 
 
 I also created my own [button](/images/buttons/legoraft-button.gif), that others can add to their sites. I created it in Krita and learned some of its animating workflow along the way.
 
+Some small quality-of-life changes were also added. Themes were moved to the left, while on the right a dark/light/auto is available. I also changed the link colors based on this interesting [post](https://susam.net/more-purple-links-please.html). I also added the commit and build time of the current site iteration, mainly for troubleshooting if necessary, but it adds to the "hacker" aesthetic.
+
 ![Head-first into the indie web, a bookshelf, webring and buttons](/images/pages/history/indie-webified.png)
