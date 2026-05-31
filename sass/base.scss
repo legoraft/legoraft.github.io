@@ -51,7 +51,7 @@ section, article, footer {
     justify-content: space-between;
 }
 
-section {
+section, div {
     &.posts, &.pages {
         padding: 1rem;
         margin: .5rem .5rem;
@@ -129,11 +129,17 @@ footer {
     margin: .5rem .5rem;
     border: 2px solid var(--foreground);
     
-    section {
+    div {
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+
+        &.indieweb-buttons, &.indieweb-webring {
+            flex-direction: row;
+            margin-top: 0;
+        }
 
         hr {
             width: 100%;
