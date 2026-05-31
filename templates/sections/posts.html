@@ -7,7 +7,7 @@
 
 {% for year, posts in section.pages | group_by(attribute="year") %}
 <section class="list">      
-    <h1 class="section-title">{{ year }}</h1>
+    <h2 class="section-title">{{ year }}</h2>
     
     <ul class="unmarked">
       {% for post in posts %}

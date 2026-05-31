@@ -18,13 +18,13 @@ body {
 .main {
     display: flex;
     flex-direction: column;
-    
+
     padding: 1rem;
     border: 2px solid var(--foreground);
     margin-top: 1rem;
 }
 
-p.section-title, h1.section-title {
+p.section-title, h1.section-title, h2.section-title {
     font-weight: normal;
     font-size: 1rem;
     margin: -1.75rem 0;
@@ -36,7 +36,7 @@ p.section-title, h1.section-title {
 h1.title {
     text-align: center;
     margin: 1rem 0;
-    
+
     &#home {
         margin: 2rem 0;
     }
@@ -68,18 +68,18 @@ section, div {
             margin-top: 2.25rem;
         }
     }
-    
+
     &.list, &.gallery {
         padding: 1rem;
         margin: .5rem .5rem;
         border: 2px solid var(--foreground);
-        
+
         li a {
             display: flex;
             justify-content: space-between;
         }
     }
-    
+
     ul.unmarked {
         list-style: none;
         margin-top: 2.25rem;
@@ -89,7 +89,7 @@ section, div {
 a {
     color: var(--accent);
     text-decoration: none;
-    
+
     &:hover, &:focus-visible {
         color: var(--background);
         background-color: var(--accent);
@@ -128,7 +128,7 @@ footer {
     padding: 1rem;
     margin: .5rem .5rem;
     border: 2px solid var(--foreground);
-    
+
     div {
         margin-top: 1rem;
         display: flex;
@@ -144,7 +144,7 @@ footer {
         hr {
             width: 100%;
         }
-        
+
         ul.unmarked {
             display: flex;
             justify-content: space-evenly;
@@ -168,52 +168,52 @@ button:hover {
 header {
     display: flex;
     justify-content: space-between;
-    
+
     button#mode-button {
         border: none;
         background-color: transparent;
-        
+
         span {
             width: 1rem;
             height: 1rem;
             color: var(--foreground);
-            
+
             svg {
                 width: 1rem;
                 height: 1rem;
             }
         }
     }
-    
+
     #theme {
         display: flex;
         gap: .5rem;
         flex-direction: row-reverse;
-        
+
         button {
             padding: .25rem .5rem;
             border: 2px solid var(--foreground);
             color: var(--foreground);
             background-color: var(--background);
-            
+
             display: flex;
             align-items: center;
             justify-content: center;
             gap: .15rem;
-            
+
             &:hover, &:focus-visible {
                 background-color: var(--foreground);
                 color: var(--background);
                 outline: none;
-                
+
                 span {
                     &#accent, &#foreground, &#surface { background-color: var(--background); }
                 }
             }
-            
+
             span {
                 margin: .25rem 0;
-                
+
                 &.dot {
                     width: .5rem;
                     height: .5rem;
@@ -221,22 +221,22 @@ header {
                     display: inline-block;
                     background-color: var(--foreground);
                 }
-                
+
                 &#accent { background-color: var(--accent); }
                 &#foreground { background-color: var(--foreground); }
                 &#surface { background-color: var(--surface); }
             }
         }
-        
+
         &:hover, &:focus-visible, &:focus-within {
             outline: none;
-            
+
             .content {
                 display: flex;
                 gap: inherit;
             }
         }
-        
+
         .content {
             display: none;
             flex-direction: inherit;
@@ -270,13 +270,13 @@ p.buildinfo {
     .wrapper {
         flex-direction: column;
     }
-    
+
     section {
         &.posts, &.pages {
             width: auto;
         }
     }
-    
+
     footer section ul {
         flex-wrap: wrap;
         gap: .5rem;

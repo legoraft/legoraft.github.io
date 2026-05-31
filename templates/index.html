@@ -7,7 +7,7 @@
 
 <div class="wrapper">
     <section class="posts">
-        <h1 class="section-title">posts</h1>
+        <h2 class="section-title">posts</h2>
         
         <ul class="unmarked">
             {% set posts = get_section(path="posts/_index.md") %}
@@ -22,7 +22,7 @@
     </section>
     
     <section class="pages">
-        <h1 class="section-title">pages</h1>
+        <h2 class="section-title">pages</h2>
         
         <ul class="unmarked">
             <li>
@@ -42,19 +42,19 @@
 </div>
 
 <section class="general">
-    <h1 class="section-title">books</h1>
+    <h2 class="section-title">books</h2>
 
     <div class="bookshelf">
         {% set library = get_section(path="books/_index.md") %}
         {% set books = library.pages | sort(attribute="date") | reverse() | slice(end=15)  %}
         {% for book in books %}
         <a href="{{ book.permalink | safe }}" class="book" style="background-color: var(--{{ book.extra.color }}); width: 2rem;">
-            <h2>{{ book.title }}</h2>
+            <h3>{{ book.title }}</h3>
         </a>
         {% endfor %}
 
         <a href="/books" class="book" style="background-color: var(--accent); width: 2rem;">
-            <h2>More...</h2>
+            <h3>More...</h3>
         </a>
     </div>
 </section>
