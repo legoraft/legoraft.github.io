@@ -23,7 +23,7 @@ section.main {
     border: 2px solid var(--foreground);
 }
 
-p.section-title {
+p.section-title, h1.section-title {
     font-weight: normal;
     font-size: 1rem;
     margin: -1.75rem 0;
