@@ -6,8 +6,8 @@
 <h1 class="title" id="home">Legoraft</h1>
 
 <div class="wrapper">
-    <section class="posts">
-        <h1 class="section-title">posts</h1>
+    <div class="posts">
+        <p class="section-title">posts</p>
         
         <ul class="unmarked">
             {% set posts = get_section(path="posts/_index.md") %}
@@ -19,10 +19,10 @@
         </ul>
         
         <a href="/posts">...</a>
-    </section>
+    </div>
     
-    <section class="pages">
-        <h1 class="section-title">pages</h1>
+    <div class="pages">
+        <p class="section-title">pages</p>
         
         <ul class="unmarked">
             <li>
@@ -38,11 +38,11 @@
                 <a href="/wander">Wander</a>
             </li>
         </ul>
-    </section>
+    </div>
 </div>
 
 <section class="general">
-    <h1 class="section-title">books</h1>
+    <p class="section-title">books</p>
 
     <div class="bookshelf">
         {% set library = get_section(path="books/_index.md") %}
