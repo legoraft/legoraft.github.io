@@ -9,7 +9,7 @@
     {% set books = section.pages | sort(attribute="taxonomies.authors.0") %}
     {% for book in books %}
     <a href="{{ book.permalink | safe }}" class="book" style="background-color: var(--{{ book.extra.color }}); min-width: {{ book.extra.width }}rem;">
-        <h1>{{ book.title }}</h1>
+        <h2>{{ book.title }}</h2>
     </a>
     {% endfor %}
 </div>
