@@ -8,7 +8,7 @@ if (savedTheme) {
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
-    const theme = button.getAttribute("theme");
+    const theme = button.getAttribute("name");
     root.setAttribute("css-theme", theme);
     localStorage.setItem("theme", theme);
   });
