@@ -24,6 +24,8 @@
 <meta name="msapplication-TileImage" content="{{ get_url(path="favicon/ms-icon-144x144.png") }}">
 <meta name="theme-color" content="#f2f2f3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#19191a" media="(prefers-color-scheme: dark)">
+
+<link rel="canonical" href="{% if page %}{{ page.permalink }}{% elif section %}{{ section.permalink }}{% endif %}"
 {% endblock %}
 
 {% block rss %}
