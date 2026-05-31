@@ -15,12 +15,13 @@ body {
     flex-direction: column;
 }
 
-section.main {
+.main {
     display: flex;
     flex-direction: column;
     
     padding: 1rem;
     border: 2px solid var(--foreground);
+    margin-top: 1rem;
 }
 
 p.section-title, h1.section-title {

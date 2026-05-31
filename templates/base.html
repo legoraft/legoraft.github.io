@@ -13,11 +13,11 @@
             </section>
         </noscript>
         
-        <section class="main">
+        <div class="main">
             {% block content %} {% endblock content %}
             
             {% include "partials/footer.html" %}
-        </section>
+        </div>
 
         <p class="buildinfo"><a style="color: var(--surface)" href="https://github.com/legoraft/legoraft.github.io/commit/{{ get_env(name="GIT_COMMIT") }}">{{ get_env(name="GIT_COMMIT") }}</a> - {{ get_env(name="BUILD_TIME") }}ms</p>
     </body>
