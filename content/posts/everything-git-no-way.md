@@ -1,8 +1,8 @@
 +++
 title = "Everything in git? No way!"
-description = ""
-date = 2026-05-31
-updated = 2026-05-31
+description = "I've been having fun with computers ever since I discovered Scratch and had followed a beginner HTML course during a fall break. I also got into Minecraft quite heavily and developed my own armor hud mod after a few years. This is when I started using github, where everyone was storing their code. At this point in time I was still dragging files into the github interface, just to create some sort of backup and allow other people to browse the code."
+date = 2026-06-06
+updated = 2026-06-06
 
 [taxonomies]
 tags = [ "tech", "programming", "self-hosting", "indieweb" ]
