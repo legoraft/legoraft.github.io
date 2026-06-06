@@ -8,7 +8,7 @@ updated = 2026-06-06
 tags = [ "tech", "programming", "self-hosting", "indieweb" ]
 +++
 
-> This post is my first submission for an [Indieweb Carnival](!todo), with this edition titled: "No way!?".
+> This post is my first submission for an [Indieweb Carnival](https://indieweb.org/IndieWeb_Carnival), with this edition titled: "[No way!?](https://alexhsu.com/en/no-way)".
 
 I've been having fun with computers ever since I discovered [Scratch](https://scratch.mit.edu/) and had followed a beginner HTML course during a fall break. I also got into Minecraft quite heavily and developed my own [armor hud mod](https://github.com/legoraft/simple-armor-hud) after a few years. This is when I started using github, where everyone was storing their code. At this point in time I was still dragging files into the github interface, just to create some sort of backup and allow other people to browse the code.
 
