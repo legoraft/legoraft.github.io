@@ -1,11 +1,11 @@
 +++
 title = "Reduce, don't quit"
-description = ""
-date = 2026-06-24
-updated = 2026-06-24
+description = "I've just read this great post by Brennan. It's mostly about the fact that we as society turn away to a lot of the meat industries' horrific actions and just eat the meat we want to eat. Who cares if animals have suffered, right? For me it was an interesting read, as I've grown up in a family where the examples he shows was normal lingo when talking about dinner. Things like \"Oh yeah, we're eating cow tonight\" or just using the normal names for the animals we're eating were used often, the more abstract names were also used, but I've always had the animal-food association."
+date = 2026-06-26
+updated = 2026-06-26
 
 [taxonomies]
-tags = [  ]
+tags = [ "climate", "reaction" ]
 +++
 
 I've just read this great [post](https://brennan.day/an-open-letter-to-compassionate-left-leaning-ai-hating-animal-loving-meat-eaters/) by [Brennan](https://brennan.day/). It's mostly about the fact that we as society turn away to a lot of the meat industries' horrific actions and just eat the meat we want to eat. Who cares if animals have suffered, right? For me it was an interesting read, as I've grown up in a family where the examples he shows was normal lingo when talking about dinner. Things like "Oh yeah, we're eating cow tonight" or just using the normal names for the animals we're eating were used often, the more abstract names were also used, but I've always had the animal-food association.
