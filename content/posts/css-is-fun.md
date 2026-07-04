@@ -1,8 +1,8 @@
 +++
 title = "CSS is fun"
 description = "CSS is something that web developers often don't really like or understand. It's one of the classic programmer jokes. I just don't think that this is true or should be true. CSS is one of the most awesome web programming languages we have."
-date = 2026-07-03
-updated = 2026-07-03
+date = 2026-07-04
+updated = 2026-07-04
 
 [taxonomies]
 tags = [ "programming", "webdev" ]
