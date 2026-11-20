@@ -8,10 +8,6 @@ updated = 2026-11-20
 tags = [ "photography", "gear", "vacation" ]
 
 [extra]
-images = {
-    camera = { src = "./SNY_00005.avif", alt = "A Canon EOS 1300D with a 50mm f/1.8 lens.", caption = "My summer camera rig" },
-}
-
 galleries = {
     vacation = [
         { src = "./IMG_4450.avif", alt = "A lamp post next to a road sign saying \"Place du Petit Fort\".", caption = "Dieppe, France" },
@@ -33,7 +29,7 @@ During my vacation I was still using the old camera I'd got for about €300 in 
 
 The 50mm is often called the "nifty-fifty", because it is so versatile in so many situations. With my 1.6x cropped APS-C sensor, it was a little too tight for my taste, but it worked great and I really understand the name of the lens. Adding this to my camera also had two extra reasons: I wanted a more compact carry for everyday shooting, so I'd make more pictures.
 
-{{ <image image={page.extra.images.camera}/> }}
+![A Canon EOS 1300D with a 50mm f/1.8 lens.](./SNY_00005.avif)
 
 And oh boy, did I make pictures. This vacation I went to Normandy in France, Prague, Hungary, Bosnia, Croatia and Ljubljana, which got me a lot of pictures. There were moments I needed to switch to my phone, because the lens was too tight, but I got a lot of great shots. I'm just dropping a few of my personal favorites here to share.
 

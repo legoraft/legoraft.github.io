@@ -11,7 +11,7 @@
         
         <ul class="unmarked">
             {% set posts = get_section(path="posts/_index.md") %}
-            {% for post in posts.pages | slice(end=5) %}
+            {% for post in posts.pages[:5] %}
             <li>
                 <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
             </li>
@@ -46,8 +46,8 @@
 
     <div class="bookshelf">
         {% set library = get_section(path="books/_index.md") %}
-        {% set books = library.pages | sort(attribute="date") | reverse() | slice(end=15)  %}
-        {% for book in books %}
+        {% set books = library.pages | sort(attribute="date") | reverse()  %}
+        {% for book in books[:15] %}
         <a href="{{ book.permalink | safe }}" class="book" style="background-color: var(--{{ book.extra.color }}); width: 2rem;">
             <h3>{{ book.title }}</h3>
         </a>
