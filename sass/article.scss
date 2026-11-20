@@ -60,6 +60,28 @@ article {
             margin: 0;
         }
     }
+
+    .image-gallery {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        overflow-x: auto;
+        padding: .75rem 0;
+    
+        figure {
+            flex: 0 0 auto;
+    
+            img {
+                height: 30rem;
+                object-fit: contain;
+            }
+    
+            figcaption {
+                font-style: italic;
+                text-align: center;
+            }
+        }
+    }
 }
 
 img {
