@@ -1,0 +1,12 @@
+{% component gallery(images: array) %}
+<div class="image-gallery">
+{% for image in images %}
+<figure>
+<img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy">
+{% if image.caption %}
+<figcaption>{{ image.caption }}</figcaption>
+{% endif %}
+</figure>
+{% endfor %}
+</div>
+{% endcomponent gallery %}
