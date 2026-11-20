@@ -2,7 +2,7 @@
 <div class="image-gallery">
 {% for image in images %}
 <figure>
-<img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy">
+<img src="{{ image.src }}" alt="{{ image.alt }}">
 {% if image.caption %}
 <figcaption>{{ image.caption }}</figcaption>
 {% endif %}
